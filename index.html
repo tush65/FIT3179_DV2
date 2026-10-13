@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Multiple Visualisations | An Example</title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+
+</head>
+
+<body>
+
+  <div class="page">
+
+   <!-- Header / Introduction Section -->
+    <div class="pure-g" style="margin-bottom: 0px;">
+      <div class="pure-u-1-1" style="text-align: center;">
+        <h1 style="font-weight: 900; margin-bottom: 50px;">Internet Usage Across Australia</h1>
+        <p style="margin-bottom: 5px;">
+          Digital technology has fundamentally shaped modern Australian life, showing how citizens engage in everyday
+          activities such as banking, shopping, education, healthcare and more. This dashboard will explore how technology
+          is actively being used in modern Australian society, while also showing some challenges, such as current gaps in
+          usage across demographics.
+        </p>
+      </div>
+    </div>
+
+    <!-- Horizontal Line Placed Right Under Text -->
+<hr style="border: 0; border-top: 2px solid #000000; margin: 10px 0 10px 0; opacity: 1;">
+    <!-- pure grid group -->
+    <!-- Full-Width Row for Visualisation 1 -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="description" style="text-align: center; margin-bottom: 20px;">
+          <p>To start, let us expand out and see how Australia compares to the rest of the world in terms of
+            what percentage of its population uses the internet regularly. Clearly, we can see from this that Australia
+            has one of the highest adoption rates in the world, even surpassing countries like the US, China, Russia,
+            and most of Europe.
+
+          </p>
+        </div>
+        <div id="vis1" class="vis-container" style="width: 100%; display: flex; justify-content: center;"></div>
+      </div>
+    </div>
+    <!-- End Full-Width Row -->
+    <!-- end pure grid group -->
+     
+    <!-- end pure grid group -->
+<hr style="border: 0; border-top: 2px solid #000000; margin: 10px 0 10px 0; opacity: 1;">
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+
+        <h1 style = "text-align: center; margin-bottom: 40px; margin-top: 25px;">Within Australia</h1>
+        <p style="margin-bottom:40px;">Now that we have shown the global trends, let is look inwards within 
+          the country.
+        </p>
+
+        <p style="margin-bottom: 40px;"> New South Wales and Victoria clearly dominate with the sheer
+          number of people accessing the internet, which is a result of thier
+          high populations.
+        </p>
+
+        <p style="margin-bottom: 40px;">
+          Meanwhile, the Australian Capital Territory leads the nation with usage rates
+          of 93.6%, showing a much deeper green marker.
+        </p>
+      </div>
+      <div class="pure-u-2-3">
+        <div class="description description-right">
+          <div id="vis2" class="vis-container"></div>
+        </div>
+      </div>
+
+    </div>
+    <!-- end pure grid group -->
+
+<hr style="border: 0; border-top: 2px solid #000000; margin: 10px 0 10px 0; opacity: 1;">
+     <div class="pure-g">
+      <div class="pure-u-1-3">
+
+        <h1 style = "text-align: center; margin-bottom: 40px; margin-top: 25px;">Why Do People Use The Internet</h1>
+        <p style="margin-bottom:40px;"> Now that we have seen how people use it in various states and territories,
+          we will see the reasons for people accessing the internet. This radar chart shows a clear divide, with 4 out of 6
+          services having a high use rate of around 80%.
+        </p>
+
+        <p style="margin-bottom: 40px;"> Services such as purchasing goods, social media, entertainment and banking
+          show very high rates of use online. Digital platforms act as the primary way to watch entertainment and social media,
+          streaming, and making connections.
+        </p>
+
+        <p style="margin-bottom: 40px;">
+          On the other hand, health services and education show less digital integration, showing that
+          medical consultations and formal learning often retain traditional in-person components.
+        </p>
+      </div>
+      <div class="pure-u-2-3">
+        <div class="description description-right">
+          <div id="vis3" class="vis-container"></div>
+        </div>
+      </div>
+
+    </div>
+<hr style="border: 0; border-top: 2px solid #000000; margin: 10px 0 10px 0; opacity: 1;">
+
+   <div class="pure-g">
+      <div class="pure-u-2-3">
+        <div id="vis4" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3">
+        <div class="description description-right">
+          <h1 style="text-align: center; margin-top: 25px;">What do Australians shop for?</h1>
+          <p>Within shopping, we will now explore what people are buying in particular, split across many categories.</p>
+
+          <p>This follows the trends that were observed in the previous visualisation,
+            with areas such as entertainment, cloting and travel showing relatively high
+            use cases at around 50%.
+          </p>
+
+
+          <p>
+            However, areas such as Health, Cars, Food and Toys show quite low usage rates,
+            all below 30%. This could be due to the fact that people prefer to see the physical
+            items, such as Cars and Food before commiting to it, and people prefer to also see health
+            professionals in person.
+
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <hr style="border: 0; border-top: 2px solid #000000; margin: 10px 0 10px 0; opacity: 1;">
+     <div class="pure-g">
+      <div class="pure-u-1-3">
+
+        <h1 style = "text-align: center; margin-bottom: 40px; margin-top: 25px;">Technology Use Across Demographics</h1>
+        <p style="margin-bottom:40px;"> Let us now compare the different uses for technology across Age Group, to figure out who is the most 
+          tech savvy, and who is lagging behind.
+        </p>
+
+        <p style="margin-bottom: 40px;"> Digital engagement peaks strongly among younder demographics. Particularly,
+          those aged 18-34 dominate in areas such as banking and entertainment where usage exceeds 85%.
+        </p>
+
+        <p style="margin-bottom: 40px;">
+          Conversely, traditional sectors like formal education show a sharp decline with age, as people being to
+          do less formal education after their 20s, while health services show consistently low usage levels
+          across all demographics, highlighting key areas for future digital growth. 
+        </p>
+      </div>
+      <div class="pure-u-2-3" style="margin-top: 15px;">
+        <div class="description description-right">
+          <div id="vis5" class="vis-container"></div>
+        </div>
+      </div>
+
+    </div>
+
+     <hr style="border: 0; border-top: 2px solid #000000; margin: 10px 0 10px 0; opacity: 1;">
+
+     <div class="pure-g">
+      <div class="pure-u-1-3">
+
+        <h1 style = "text-align: center; margin-bottom: 40px; margin-top: 25px;">Factors Influencing Access to Technology</h1>
+        <p style="margin-bottom:40px;"> Now that we have seen how internet usage shifts across age groups, let us
+          delve deeper into this by seeing how internet usage differs across broader demographics.
+        </p>
+
+        <p style="margin-bottom: 40px;"> We can see that overall, the internet usage rate even amongst the most disadvantaged
+          demographic groups maintains a strong baseline of at least 65%, demonstrating idespread digital access across Australia.
+        </p>
+
+        <p style="margin-bottom: 40px;">
+          Household income rates creates the biggest digital divide in Australia, with around 69% access rate for the lowest income bracket,
+          and a near 100% usage rate for the highest earners. While this makes sense, some factors which are expected to play a big role,
+          such as remoteness, show only a minor difference of around 7% in the usage rate.
+        </p>
+      </div>
+      <div class="pure-u-2-3" style="margin-top: 25px;">
+        <div class="description description-right">
+          <div id="vis6" class="vis-container"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div> <!-- end page -->
+
+
+
+  <script type="text/javascript">
+    var specVis1 = "./v1.vg.json";
+    var specVis2 = "./ABS/v5.vg.json";
+    var specVis3 = "./v2.vg.json";
+    var specVis4 = "./ABS/v6.vg.json";
+    var specVis5 =   "./ABS/v3.vg.json";
+    var specVis6 =   "./ABS/v4.vg.json";
+    vegaEmbed('#vis1', specVis1, { "actions": false });
+
+    vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+     vegaEmbed('#vis6', specVis6, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Internet Activities Across Age Groups (%) (2016-2017)",
+    "fontSize": 16,
+    "anchor": "start"
+  },
+  "width": "container",
+  "height": 550,
+  "data": { "url": "ABS/technology_usage_processed.csv" },
+  "encoding": {
+    "x": {
+      "field": "Age Group",
+      "type": "ordinal",
+      "title": "Age Group",
+      "sort": ["15–17", "18–24", "25–34", "35–44", "45–54", "55–64", "65 or over"],
+      "axis": { "labelAngle": 0 }
+    },
+    "y": {
+      "field": "Activity",
+      "type": "nominal",
+      "title": "Activity Category"
+    }
+  },
+  "layer": [
+    {
+      "mark": "rect",
+      "encoding": {
+        "color": {
+          "field": "Percentage",
+          "type": "quantitative",
+          "title": "Usage (%)",
+          "scale": {
+            "scheme": "greens",
+            "domain": [0, 100]
+          }
+        },
+        "tooltip": [
+          { "field": "Age Group", "type": "nominal" },
+          { "field": "Activity", "type": "nominal" },
+          { "field": "Percentage", "type": "quantitative", "format": ".1f" }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "text": { "field": "Percentage", "type": "quantitative", "format": ".1f" },
+        "color": {
+          "condition": {
+            "test": "datum.Percentage > 60",
+            "value": "white"
+          },
+          "value": "black"
+        }
+      }
+    }
+  ]
+}

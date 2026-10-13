@@ -1,0 +1,824 @@
+[
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":1990,
+    "Adoption_Rate":0.585
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":1990,
+    "Adoption_Rate":0.0874
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":1990,
+    "Adoption_Rate":0.0203
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":1990,
+    "Adoption_Rate":0.785
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":1991,
+    "Adoption_Rate":1.1
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":1991,
+    "Adoption_Rate":0.174
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":1991,
+    "Adoption_Rate":0.0404
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":1991,
+    "Adoption_Rate":1.16
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":1992,
+    "Adoption_Rate":1.77
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":1992,
+    "Adoption_Rate":0.261
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":1992,
+    "Adoption_Rate":0.0967
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":1992,
+    "Adoption_Rate":1.72
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":1993,
+    "Adoption_Rate":1.97
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":1993,
+    "Adoption_Rate":0.52
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":1993,
+    "Adoption_Rate":0.401
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":1993,
+    "Adoption_Rate":2.27
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":1994,
+    "Adoption_Rate":2.23
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":1994,
+    "Adoption_Rate":1.04
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":1994,
+    "Adoption_Rate":0.8
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":1994,
+    "Adoption_Rate":4.86
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":1995,
+    "Adoption_Rate":2.76
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":1995,
+    "Adoption_Rate":1.9
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":1995,
+    "Adoption_Rate":1.59
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":1995,
+    "Adoption_Rate":9.24
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":1996,
+    "Adoption_Rate":3.28
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":1996,
+    "Adoption_Rate":4.12
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":1996,
+    "Adoption_Rate":4.37
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":1996,
+    "Adoption_Rate":16.4
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":1997,
+    "Adoption_Rate":16.4
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":1997,
+    "Adoption_Rate":7.39
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":1997,
+    "Adoption_Rate":9.16
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":1997,
+    "Adoption_Rate":21.6
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":1998,
+    "Adoption_Rate":30.8
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":1998,
+    "Adoption_Rate":13.7
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":1998,
+    "Adoption_Rate":13.4
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":1998,
+    "Adoption_Rate":30.1
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":1999,
+    "Adoption_Rate":40.8
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":1999,
+    "Adoption_Rate":21.3
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":1999,
+    "Adoption_Rate":21.4
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":1999,
+    "Adoption_Rate":35.8
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":2000,
+    "Adoption_Rate":46.75611561
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2000,
+    "Adoption_Rate":26.82175435
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2000,
+    "Adoption_Rate":29.99074036
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2000,
+    "Adoption_Rate":43.07916264
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":2001,
+    "Adoption_Rate":52.68926643
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2001,
+    "Adoption_Rate":33.48109487
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2001,
+    "Adoption_Rate":38.53206086
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2001,
+    "Adoption_Rate":49.08083159
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2002,
+    "Adoption_Rate":56.48
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2002,
+    "Adoption_Rate":46.59420112
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2002,
+    "Adoption_Rate":58.78540388
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2003,
+    "Adoption_Rate":64.82
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2003,
+    "Adoption_Rate":48.43526589
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2003,
+    "Adoption_Rate":61.69711712
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2004,
+    "Adoption_Rate":65.61
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2004,
+    "Adoption_Rate":62.39392963
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2004,
+    "Adoption_Rate":64.75825648
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":2005,
+    "Adoption_Rate":63.0
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2005,
+    "Adoption_Rate":70.0
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2005,
+    "Adoption_Rate":66.9210661
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2005,
+    "Adoption_Rate":67.9681015
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":2006,
+    "Adoption_Rate":66.0
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2006,
+    "Adoption_Rate":68.82
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2006,
+    "Adoption_Rate":68.68527032
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2006,
+    "Adoption_Rate":68.93119812
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":2007,
+    "Adoption_Rate":69.45
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2007,
+    "Adoption_Rate":75.09
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2007,
+    "Adoption_Rate":74.3
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2007,
+    "Adoption_Rate":75.0
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":2008,
+    "Adoption_Rate":71.67
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2008,
+    "Adoption_Rate":78.39
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2008,
+    "Adoption_Rate":75.4
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2008,
+    "Adoption_Rate":74.0
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":2009,
+    "Adoption_Rate":74.25
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2009,
+    "Adoption_Rate":83.56
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2009,
+    "Adoption_Rate":78.0
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2009,
+    "Adoption_Rate":71.0
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":2010,
+    "Adoption_Rate":76.0
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2010,
+    "Adoption_Rate":85.0
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2010,
+    "Adoption_Rate":78.21
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2010,
+    "Adoption_Rate":71.69
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":2011,
+    "Adoption_Rate":79.48769771
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2011,
+    "Adoption_Rate":85.37999855
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2011,
+    "Adoption_Rate":79.05411352
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2011,
+    "Adoption_Rate":69.72946076
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":2012,
+    "Adoption_Rate":79.0
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2012,
+    "Adoption_Rate":87.47999842
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2012,
+    "Adoption_Rate":79.4964
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2012,
+    "Adoption_Rate":74.7
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":2013,
+    "Adoption_Rate":83.45349717
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2013,
+    "Adoption_Rate":89.8441
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2013,
+    "Adoption_Rate":88.21942891
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2013,
+    "Adoption_Rate":71.4
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":2014,
+    "Adoption_Rate":84.0
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2014,
+    "Adoption_Rate":91.61330092
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2014,
+    "Adoption_Rate":89.10683302
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2014,
+    "Adoption_Rate":73.0
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":2015,
+    "Adoption_Rate":84.56051491
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2015,
+    "Adoption_Rate":92.00029987
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2015,
+    "Adoption_Rate":91.05802839
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2015,
+    "Adoption_Rate":74.55420245
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":2016,
+    "Adoption_Rate":86.54000092
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2016,
+    "Adoption_Rate":94.77580063
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2016,
+    "Adoption_Rate":93.18272128
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2016,
+    "Adoption_Rate":85.54442129
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":2017,
+    "Adoption_Rate":86.54504885
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2017,
+    "Adoption_Rate":90.42455049
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2017,
+    "Adoption_Rate":91.72654724
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2017,
+    "Adoption_Rate":87.27488917
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":2018,
+    "Adoption_Rate":90.0082016
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2018,
+    "Adoption_Rate":90.69200899
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2018,
+    "Adoption_Rate":88.74635089
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2018,
+    "Adoption_Rate":88.49890317
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":2019,
+    "Adoption_Rate":93.60990143
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2019,
+    "Adoption_Rate":92.51662855
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2019,
+    "Adoption_Rate":92.73039781
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2019,
+    "Adoption_Rate":89.43028486
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":2020,
+    "Adoption_Rate":94.6934967
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2020,
+    "Adoption_Rate":94.81820132
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2020,
+    "Adoption_Rate":90.21945812
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2020,
+    "Adoption_Rate":90.34470367
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":2021,
+    "Adoption_Rate":96.97219849
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2021,
+    "Adoption_Rate":96.19650269
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2021,
+    "Adoption_Rate":82.91407928
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2021,
+    "Adoption_Rate":91.2684021
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":2022,
+    "Adoption_Rate":96.11940002
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2022,
+    "Adoption_Rate":95.46530151
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2022,
+    "Adoption_Rate":84.92343147
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2022,
+    "Adoption_Rate":92.72850037
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":2023,
+    "Adoption_Rate":96.1160965
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2023,
+    "Adoption_Rate":95.44719696
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2023,
+    "Adoption_Rate":85.00990295
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2023,
+    "Adoption_Rate":93.52559662
+  },
+  {
+    "Country Name":"Australia",
+    "Country Code":"AUS",
+    "Year":2024,
+    "Adoption_Rate":96.13140106
+  },
+  {
+    "Country Name":"United Kingdom",
+    "Country Code":"GBR",
+    "Year":2024,
+    "Adoption_Rate":95.4720993
+  },
+  {
+    "Country Name":"Japan",
+    "Country Code":"JPN",
+    "Year":2024,
+    "Adoption_Rate":85.54153081
+  },
+  {
+    "Country Name":"United States",
+    "Country Code":"USA",
+    "Year":2024,
+    "Adoption_Rate":94.69380188
+  }
+]

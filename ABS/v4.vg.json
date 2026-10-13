@@ -1,0 +1,145 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Internet Access Levels Across Demographics (2016 - 2017) (%)",
+    "fontSize": 16,
+    "anchor": "start",
+    "offset": 50
+  },
+  "data": {
+    "values": [
+        {
+            "category" : "Household Income",
+            "low-group": "Lowest Quintile",
+            "low_pct" : 68.8,
+            "high-group": "Highest Quintile",
+            "high_pct": 97.4,
+            "gap": 28.6
+        },
+
+        {
+             "category" : "Employment",
+            "low-group": "Unemployed",
+            "low_pct" : 72.5,
+            "high-group": "Employed",
+            "high_pct": 95.1,
+            "gap": 22.6
+        },
+
+        {
+             "category" : "Education",
+            "low-group": "Year 12 and below",
+            "low_pct" : 79.1,
+            "high-group": "Bachelors+",
+            "high_pct": 96.7,
+            "gap": 17.6
+        },
+
+        {
+             "category" : "Remoteness",
+            "low-group": "Remote",
+            "low_pct" : 80.6,
+            "high-group": "Major Cities",
+            "high_pct": 87.9,
+            "gap": 7.3
+        }
+    ]
+  },
+  "width": "container",
+  "height": 550,
+  "layer": [
+    {
+        "description": "Connecting line between min and max group",
+        "mark": {
+            "type": "rule",
+            "color": "#cbd5e1",
+            "strokeWidth": 4
+        },
+        "encoding": {
+            "y" : {
+                "field": "category",
+                "type": "nominal",
+                "sort": ["Household Income", "Employment", "Education", "Remoteness"]
+            },
+            "x":{
+                "field": "low_pct",
+                "type": "quantitative",
+                "title": "Internet Penetration Rate (%)",
+                "scale": {"domain": [53, 110]}
+            },
+            "x2": {"field": "high_pct"}
+        }
+    }, 
+    
+    {
+        "mark" : {
+            "type": "point",
+            "filled": true,
+            "size": 150,
+            "color": "#e53e3e"
+        },
+        "encoding": {
+            "y": {"field": "category", "type": "nominal"},
+            "x": {"field": "low_pct", "type": "quantitative"},
+            "tooltip": [
+                {"field": "category", "title": "Category"},
+                {"field": "low-group", "title": "Lowest Group"},
+                {"field": "low_pct", "title": "Penetration Rate (%)"}
+            ]
+        }
+    },
+
+    {
+        "mark" : {
+            "type": "point",
+            "filled": true,
+            "size": 150,
+            "color": "green"
+        },
+        "encoding": {
+            "y": {"field": "category", "type": "nominal"},
+            "x": {"field": "high_pct", "type": "quantitative"},
+            "tooltip": [
+                {"field": "category", "title": "Category"},
+                {"field": "high-group", "title": "Lowest Group"},
+                {"field": "high_pct", "title": "Penetration Rate (%)"}
+            ]
+        }
+    },
+
+    {
+      "description": "Lowest Group Label",
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -10,
+        "dy": 1,
+        "color": "#c53030",
+        "fontWeight": "bold",
+        "fontSize": 11
+      },
+      "encoding": {
+        "y": {"field": "category", "type": "nominal"},
+        "x": {"field": "low_pct", "type": "quantitative"},
+        "text": {"field": "low-group", "type": "nominal"}
+      }
+    },
+    {
+      "description": "Highest Group Label",
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 7,
+        "dy": 1,
+        "color": "#2b6cb0",
+        "fontWeight": "bold",
+        "fontSize": 11
+      },
+      "encoding": {
+        "y": {"field": "category", "type": "nominal"},
+        "x": {"field": "high_pct", "type": "quantitative"},
+       "text": {"field": "high-group", "type": "nominal"}
+      }
+    }
+
+  ]}

@@ -1,0 +1,171 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Australian Everyday Digital Life Profile (2016-2017)",
+    "subtitle": "Household participation rate (%) across daily digital activities"
+  },
+  "width": "container",
+  "height": 520,
+  "data": {
+    "values": [
+      {"key": "Banking", "value": 79.5, "id": 0},
+      {"key": "Entertainment", "value": 80.0, "id": 1},
+      {"key": "Social Networking", "value": 79.9, "id": 2},
+      {"key": "Purchasing Goods or Services", "value": 72.6, "id": 3},
+      {"key": "Education", "value": 31.7, "id": 4},
+      {"key": "Health Services", "value": 46.1, "id": 5},
+      {"key": "Banking", "value": 79.5, "id": 6}
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {"level": 20, "id": 0}, {"level": 20, "id": 1}, {"level": 20, "id": 2}, {"level": 20, "id": 3}, {"level": 20, "id": 4}, {"level": 20, "id": 5}, {"level": 20, "id": 6},
+          {"level": 40, "id": 0}, {"level": 40, "id": 1}, {"level": 40, "id": 2}, {"level": 40, "id": 3}, {"level": 40, "id": 4}, {"level": 40, "id": 5}, {"level": 40, "id": 6},
+          {"level": 60, "id": 0}, {"level": 60, "id": 1}, {"level": 60, "id": 2}, {"level": 60, "id": 3}, {"level": 60, "id": 4}, {"level": 60, "id": 5}, {"level": 60, "id": 6},
+          {"level": 80, "id": 0}, {"level": 80, "id": 1}, {"level": 80, "id": 2}, {"level": 80, "id": 3}, {"level": 80, "id": 4}, {"level": 80, "id": 5}, {"level": 80, "id": 6},
+          {"level": 100, "id": 0}, {"level": 100, "id": 1}, {"level": 100, "id": 2}, {"level": 100, "id": 3}, {"level": 100, "id": 4}, {"level": 100, "id": 5}, {"level": 100, "id": 6}
+        ]
+      },
+      "transform": [
+        {"calculate": "datum.id * (2 * PI / 6) - (PI / 2)", "as": "angle"},
+        {"calculate": "(datum.level - 20) * 2.2 * cos(datum.angle)", "as": "x"},
+        {"calculate": "(datum.level - 20) * 2.2 * sin(datum.angle)", "as": "y"}
+      ],
+      "mark": {
+        "type": "line",
+        "color": "#e2e8f0",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative", "scale": {"domain": [-220, 220]}, "axis": null},
+        "y": {"field": "y", "type": "quantitative", "scale": {"domain": [-220, 220]}, "axis": null},
+        "detail": {"field": "level", "type": "nominal"},
+        "order": {"field": "id", "type": "quantitative"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"id": 0}, {"id": 1}, {"id": 2}, {"id": 3}, {"id": 4}, {"id": 5}
+        ]
+      },
+      "transform": [
+        {"calculate": "datum.id * (2 * PI / 6) - (PI / 2)", "as": "angle"},
+        {"calculate": "176 * cos(datum.angle)", "as": "x2"},
+        {"calculate": "176 * sin(datum.angle)", "as": "y2"}
+      ],
+      "mark": {
+        "type": "rule",
+        "color": "#cbd5e1",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {"datum": 0, "type": "quantitative"},
+        "y": {"datum": 0, "type": "quantitative"},
+        "x2": {"field": "x2", "type": "quantitative"},
+        "y2": {"field": "y2", "type": "quantitative"}
+      }
+    },
+    {
+  "transform": [
+    {"calculate": "datum.id * (2 * PI / 6) - (PI / 2)", "as": "angle"},
+    {"calculate": "(datum.value - 20) * 2.2 * cos(datum.angle)", "as": "x"},
+    {"calculate": "(datum.value - 20) * 2.2 * sin(datum.angle)", "as": "y"}
+  ],
+  "mark": {
+    "type": "line",
+    "interpolate": "linear-closed",
+    "filled": true,
+    "fill": "green",
+    "fillOpacity": 1,
+    "stroke": "green",
+    "strokeWidth": 2.5
+  },
+  "encoding": {
+    "x": {"field": "x", "type": "quantitative"},
+    "y": {"field": "y", "type": "quantitative"},
+    "order": {"field": "id", "type": "quantitative"}
+  }
+},
+    {
+      "transform": [
+        {"calculate": "datum.id * (2 * PI / 6) - (PI / 2)", "as": "angle"},
+        {"calculate": "(datum.value - 20) * 2.2 * cos(datum.angle)", "as": "x"},
+        {"calculate": "(datum.value - 20) * 2.2 * sin(datum.angle)", "as": "y"}
+      ],
+      "mark": {
+        "type": "line",
+        "color": "green",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"},
+        "order": {"field": "id", "type": "quantitative"}
+      }
+    },
+    {
+      "transform": [
+        {"calculate": "datum.id * (2 * PI / 6) - (PI / 2)", "as": "angle"},
+        {"calculate": "(datum.value - 20) * 2.2 * cos(datum.angle)", "as": "x"},
+        {"calculate": "(datum.value - 20) * 2.2 * sin(datum.angle)", "as": "y"}
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "color": "green",
+        "size": 120,
+        "cursor": "pointer"
+      },
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"},
+        "tooltip": [
+          {"field": "key", "type": "nominal", "title": "Activity"},
+          {"field": "value", "type": "quantitative", "format": ".1f", "title": "Participation Rate (%)"}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {"calculate": "datum.id * (2 * PI / 6) - (PI / 2)", "as": "angle"},
+        {"calculate": "((datum.value - 20) * 2.2 + 25) * cos(datum.angle)", "as": "val_x"},
+        {"calculate": "((datum.value - 20) * 2.2 + 25) * sin(datum.angle)", "as": "val_y"},
+        {"calculate": "datum.value + '%'", "as": "val_str"}
+      ],
+      "mark": {
+        "type": "text",
+        "fontWeight": "bold",
+        "fontSize": 11,
+        "color": "green"
+      },
+      "encoding": {
+        "x": {"field": "val_x", "type": "quantitative"},
+        "y": {"field": "val_y", "type": "quantitative"},
+        "text": {"field": "val_str", "type": "nominal"}
+      }
+    },
+    {
+      "transform": [
+        {"calculate": "datum.id * (2 * PI / 6) - (PI / 2)", "as": "angle"},
+        {"calculate": "200 * cos(datum.angle)", "as": "label_x"},
+        {"calculate": "200 * sin(datum.angle)", "as": "label_y"}
+      ],
+      "mark": {
+        "type": "text",
+        "fontWeight": "bold",
+        "fontSize": 12,
+        "color": "#1e293b",
+        "align":"center",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "x": {"field": "label_x", "type": "quantitative"},
+        "y": {"field": "label_y", "type": "quantitative"},
+        "text": {"field": "key", "type": "nominal"}
+      }
+    }
+  ]
+}

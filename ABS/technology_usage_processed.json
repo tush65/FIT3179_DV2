@@ -1,0 +1,212 @@
+[
+  {
+    "Age Group":"15\u201317",
+    "Activity":"Banking",
+    "Percentage":39.4
+  },
+  {
+    "Age Group":"18\u201324",
+    "Activity":"Banking",
+    "Percentage":87.4
+  },
+  {
+    "Age Group":"25\u201334",
+    "Activity":"Banking",
+    "Percentage":93.1
+  },
+  {
+    "Age Group":"35\u201344",
+    "Activity":"Banking",
+    "Percentage":86.7
+  },
+  {
+    "Age Group":"45\u201354",
+    "Activity":"Banking",
+    "Percentage":79.2
+  },
+  {
+    "Age Group":"55\u201364",
+    "Activity":"Banking",
+    "Percentage":75.1
+  },
+  {
+    "Age Group":"65 or over",
+    "Activity":"Banking",
+    "Percentage":58.2
+  },
+  {
+    "Age Group":"15\u201317",
+    "Activity":"Social Networking",
+    "Percentage":93.2
+  },
+  {
+    "Age Group":"18\u201324",
+    "Activity":"Social Networking",
+    "Percentage":95.7
+  },
+  {
+    "Age Group":"25\u201334",
+    "Activity":"Social Networking",
+    "Percentage":92.9
+  },
+  {
+    "Age Group":"35\u201344",
+    "Activity":"Social Networking",
+    "Percentage":84.2
+  },
+  {
+    "Age Group":"45\u201354",
+    "Activity":"Social Networking",
+    "Percentage":75.2
+  },
+  {
+    "Age Group":"55\u201364",
+    "Activity":"Social Networking",
+    "Percentage":65.0
+  },
+  {
+    "Age Group":"65 or over",
+    "Activity":"Social Networking",
+    "Percentage":51.2
+  },
+  {
+    "Age Group":"15\u201317",
+    "Activity":"Purchasing Goods\/Services",
+    "Percentage":60.5
+  },
+  {
+    "Age Group":"18\u201324",
+    "Activity":"Purchasing Goods\/Services",
+    "Percentage":81.2
+  },
+  {
+    "Age Group":"25\u201334",
+    "Activity":"Purchasing Goods\/Services",
+    "Percentage":84.0
+  },
+  {
+    "Age Group":"35\u201344",
+    "Activity":"Purchasing Goods\/Services",
+    "Percentage":77.4
+  },
+  {
+    "Age Group":"45\u201354",
+    "Activity":"Purchasing Goods\/Services",
+    "Percentage":70.8
+  },
+  {
+    "Age Group":"55\u201364",
+    "Activity":"Purchasing Goods\/Services",
+    "Percentage":64.4
+  },
+  {
+    "Age Group":"65 or over",
+    "Activity":"Purchasing Goods\/Services",
+    "Percentage":52.3
+  },
+  {
+    "Age Group":"15\u201317",
+    "Activity":"Entertainment",
+    "Percentage":91.8
+  },
+  {
+    "Age Group":"18\u201324",
+    "Activity":"Entertainment",
+    "Percentage":92.9
+  },
+  {
+    "Age Group":"25\u201334",
+    "Activity":"Entertainment",
+    "Percentage":89.2
+  },
+  {
+    "Age Group":"35\u201344",
+    "Activity":"Entertainment",
+    "Percentage":83.5
+  },
+  {
+    "Age Group":"45\u201354",
+    "Activity":"Entertainment",
+    "Percentage":74.9
+  },
+  {
+    "Age Group":"55\u201364",
+    "Activity":"Entertainment",
+    "Percentage":67.7
+  },
+  {
+    "Age Group":"65 or over",
+    "Activity":"Entertainment",
+    "Percentage":60.1
+  },
+  {
+    "Age Group":"15\u201317",
+    "Activity":"Formal Educational Activities",
+    "Percentage":78.6
+  },
+  {
+    "Age Group":"18\u201324",
+    "Activity":"Formal Educational Activities",
+    "Percentage":56.8
+  },
+  {
+    "Age Group":"25\u201334",
+    "Activity":"Formal Educational Activities",
+    "Percentage":35.4
+  },
+  {
+    "Age Group":"35\u201344",
+    "Activity":"Formal Educational Activities",
+    "Percentage":29.8
+  },
+  {
+    "Age Group":"45\u201354",
+    "Activity":"Formal Educational Activities",
+    "Percentage":24.0
+  },
+  {
+    "Age Group":"55\u201364",
+    "Activity":"Formal Educational Activities",
+    "Percentage":18.8
+  },
+  {
+    "Age Group":"65 or over",
+    "Activity":"Formal Educational Activities",
+    "Percentage":7.3
+  },
+  {
+    "Age Group":"15\u201317",
+    "Activity":"Health Services",
+    "Percentage":18.6
+  },
+  {
+    "Age Group":"18\u201324",
+    "Activity":"Health Services",
+    "Percentage":42.0
+  },
+  {
+    "Age Group":"25\u201334",
+    "Activity":"Health Services",
+    "Percentage":56.2
+  },
+  {
+    "Age Group":"35\u201344",
+    "Activity":"Health Services",
+    "Percentage":52.6
+  },
+  {
+    "Age Group":"45\u201354",
+    "Activity":"Health Services",
+    "Percentage":45.6
+  },
+  {
+    "Age Group":"55\u201364",
+    "Activity":"Health Services",
+    "Percentage":42.5
+  },
+  {
+    "Age Group":"65 or over",
+    "Activity":"Health Services",
+    "Percentage":38.2
+  }
+]

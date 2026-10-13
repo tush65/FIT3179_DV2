@@ -1,0 +1,281 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "A packed bubble chart.",
+  "usermeta": {
+    "author": "David Bacci",
+    "github": "https://github.com/PBI-David/Deneb-Showcase"
+  },
+  "width": 500,
+  "height": 500,
+  "padding": {
+    "left": 5,
+    "right": 5,
+    "top": 20,
+    "bottom": 0
+  },
+  "autosize": "none",
+  "signals": [
+    {
+      "name": "cx",
+      "update": "width / 2"
+    },
+    {
+      "name": "cy",
+      "update": "height / 2"
+    },
+    {
+      "name": "gravityX",
+      "value": 0.2,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 1
+      }
+    },
+    {
+      "name": "gravityY",
+      "value": 0.1,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 1
+      }
+    }
+  ],
+  "data": [
+    {
+      "name": "table",
+      "values": [
+        {
+          "category": "Entertainment",
+          "amount": 6013.1,
+          "pct": 49.9
+        },
+        {
+          "category": "Clothing",
+          "amount": 5698.3,
+          "pct": 47.3
+        },
+        {
+          "category": "Event Tickets",
+          "amount": 5719.6,
+          "pct": 47.5
+        },
+        {
+          "category": "Travel",
+          "amount": 6023.7,
+          "pct": 50
+        },
+        {
+          "category": "Toys",
+          "amount": 3661.7,
+          "pct": 30.4
+        },
+        {
+          "category": "Electronics",
+          "amount": 3119.2,
+          "pct": 25.9
+        },
+        {
+          "category": "Food",
+          "amount": 2316,
+          "pct": 19.2
+        },
+        {
+          "category": "Health",
+          "amount": 1780.4,
+          "pct": 14.8
+        },
+        {
+          "category": "Cars",
+          "amount": 1342.6,
+          "pct": 11.2
+        },
+        {
+          "category": "Gambling",
+          "amount": 590.5,
+          "pct": 4.9
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "size",
+      "domain": {
+        "data": "table",
+        "field": "amount"
+      },
+      "zero": true,
+      "range": [
+        0,
+        25000
+      ]
+    },
+    {
+      "name": "color",
+      "type": "linear",
+      "domain": {
+        "data": "table",
+        "field": "pct"
+      },
+      "zero": true,
+      "range": [
+        "#c7e9c0",
+        "#00441b"
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "name": "nodes",
+      "type": "symbol",
+      "from": {
+        "data": "table"
+      },
+      "encode": {
+        "enter": {
+          "fill": {
+            "scale": "color",
+            "field": "pct"
+          },
+          "xfocus": {
+            "signal": "cx"
+          },
+          "yfocus": {
+            "signal": "cy"
+          }
+        },
+        "update": {
+          "size": {
+            "signal": "datum.amount",
+            "scale": "size"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 1
+          },
+          "tooltip": {
+            "signal": "datum"
+          }
+        }
+      },
+      "transform": [
+        {
+          "type": "force",
+          "iterations": 100,
+          "static": false,
+          "forces": [
+            {
+              "force": "collide",
+              "iterations": 2,
+              "radius": {
+                "expr": "sqrt(datum.size)/2"
+              }
+            },
+            {
+              "force": "center",
+              "x": {
+                "signal": "cx"
+              },
+              "y": {
+                "signal": "cy"
+              }
+            },
+            {
+              "force": "x",
+              "x": "xfocus",
+              "strength": {
+                "signal": "gravityX"
+              }
+            },
+            {
+              "force": "y",
+              "y": "yfocus",
+              "strength": {
+                "signal": "gravityY"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "nodes"
+      },
+      "encode": {
+        "enter": {
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "signal": "datum.datum.pct > 25 ? '#ffffff' : '#0b2e13'"
+          },
+          "text": {
+            "field": "datum.category"
+          }
+        },
+        "update": {
+          "x": {
+            "field": "x"
+          },
+          "y": {
+            "field": "y"
+          },
+          "fontSize": {
+            "signal": "min(15, max(9, sqrt(datum.size) / 4.5))"
+          },
+          "dy": {
+            "signal": "-0.7 * min(15, max(9, sqrt(datum.size) / 4.5))"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "nodes"
+      },
+      "encode": {
+        "enter": {
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fill": {
+            "signal": "datum.datum.pct > 25 ? '#ffffff' : '#0b2e13'"
+          },
+          "text": {
+            "signal": "datum.datum.pct + '%'"
+          }
+        },
+        "update": {
+          "x": {
+            "field": "x"
+          },
+          "y": {
+            "field": "y"
+          },
+          "dy": {
+            "signal": "0.8 * min(15, max(9, sqrt(datum.size) / 4.5))"
+          },
+          "fontSize": {
+            "signal": "min(15, max(9, sqrt(datum.size) / 4.5))"
+          }
+        }
+      }
+    }
+  ]
+}

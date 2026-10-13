@@ -1,0 +1,858 @@
+[
+  {
+    "Country Code":"AFE",
+    "Adoption_Rate":28.8
+  },
+  {
+    "Country Code":"AFG",
+    "Adoption_Rate":16.09499931
+  },
+  {
+    "Country Code":"AFW",
+    "Adoption_Rate":40.0
+  },
+  {
+    "Country Code":"AGO",
+    "Adoption_Rate":40.70479965
+  },
+  {
+    "Country Code":"ALB",
+    "Adoption_Rate":85.86389923
+  },
+  {
+    "Country Code":"AND",
+    "Adoption_Rate":94.39759827
+  },
+  {
+    "Country Code":"ARE",
+    "Adoption_Rate":100.0
+  },
+  {
+    "Country Code":"ARG",
+    "Adoption_Rate":89.66715228
+  },
+  {
+    "Country Code":"ARM",
+    "Adoption_Rate":81.33930206
+  },
+  {
+    "Country Code":"ATG",
+    "Adoption_Rate":72.73040009
+  },
+  {
+    "Country Code":"AUS",
+    "Adoption_Rate":96.13140106
+  },
+  {
+    "Country Code":"AUT",
+    "Adoption_Rate":94.91974877
+  },
+  {
+    "Country Code":"AZE",
+    "Adoption_Rate":90.43979645
+  },
+  {
+    "Country Code":"BDI",
+    "Adoption_Rate":8.595999718
+  },
+  {
+    "Country Code":"BEL",
+    "Adoption_Rate":95.77579144
+  },
+  {
+    "Country Code":"BEN",
+    "Adoption_Rate":33.98379898
+  },
+  {
+    "Country Code":"BFA",
+    "Adoption_Rate":28.25270081
+  },
+  {
+    "Country Code":"BGD",
+    "Adoption_Rate":53.42171316
+  },
+  {
+    "Country Code":"BGR",
+    "Adoption_Rate":82.438955
+  },
+  {
+    "Country Code":"BHR",
+    "Adoption_Rate":100.0
+  },
+  {
+    "Country Code":"BHS",
+    "Adoption_Rate":92.47270203
+  },
+  {
+    "Country Code":"BIH",
+    "Adoption_Rate":86.10091103
+  },
+  {
+    "Country Code":"BLR",
+    "Adoption_Rate":94.26182128
+  },
+  {
+    "Country Code":"BLZ",
+    "Adoption_Rate":80.00582262
+  },
+  {
+    "Country Code":"BOL",
+    "Adoption_Rate":79.70469666
+  },
+  {
+    "Country Code":"BRA",
+    "Adoption_Rate":84.46347227
+  },
+  {
+    "Country Code":"BRB",
+    "Adoption_Rate":70.36470032
+  },
+  {
+    "Country Code":"BRN",
+    "Adoption_Rate":96.29828801
+  },
+  {
+    "Country Code":"BTN",
+    "Adoption_Rate":91.27739716
+  },
+  {
+    "Country Code":"BWA",
+    "Adoption_Rate":57.45950036
+  },
+  {
+    "Country Code":"CAF",
+    "Adoption_Rate":13.78250027
+  },
+  {
+    "Country Code":"CAN",
+    "Adoption_Rate":94.353302
+  },
+  {
+    "Country Code":"CHE",
+    "Adoption_Rate":97.3443985
+  },
+  {
+    "Country Code":"CHL",
+    "Adoption_Rate":95.590243
+  },
+  {
+    "Country Code":"CHN",
+    "Adoption_Rate":92.0
+  },
+  {
+    "Country Code":"CIV",
+    "Adoption_Rate":41.43219902
+  },
+  {
+    "Country Code":"CMR",
+    "Adoption_Rate":46.25880051
+  },
+  {
+    "Country Code":"COD",
+    "Adoption_Rate":19.67350006
+  },
+  {
+    "Country Code":"COG",
+    "Adoption_Rate":47.25159836
+  },
+  {
+    "Country Code":"COL",
+    "Adoption_Rate":79.34543299
+  },
+  {
+    "Country Code":"COM",
+    "Adoption_Rate":32.51750183
+  },
+  {
+    "Country Code":"CPV",
+    "Adoption_Rate":74.73519897
+  },
+  {
+    "Country Code":"CRI",
+    "Adoption_Rate":87.17019653
+  },
+  {
+    "Country Code":"CUB",
+    "Adoption_Rate":70.47699738
+  },
+  {
+    "Country Code":"CYP",
+    "Adoption_Rate":89.60099246
+  },
+  {
+    "Country Code":"CZE",
+    "Adoption_Rate":87.68776014
+  },
+  {
+    "Country Code":"DEU",
+    "Adoption_Rate":93.49999579
+  },
+  {
+    "Country Code":"DJI",
+    "Adoption_Rate":65.29889679
+  },
+  {
+    "Country Code":"DMA",
+    "Adoption_Rate":82.04689789
+  },
+  {
+    "Country Code":"DNK",
+    "Adoption_Rate":99.76915157
+  },
+  {
+    "Country Code":"DOM",
+    "Adoption_Rate":91.0022446
+  },
+  {
+    "Country Code":"DZA",
+    "Adoption_Rate":77.4178009
+  },
+  {
+    "Country Code":"EAP",
+    "Adoption_Rate":86.1
+  },
+  {
+    "Country Code":"EAS",
+    "Adoption_Rate":86.6
+  },
+  {
+    "Country Code":"ECA",
+    "Adoption_Rate":85.8
+  },
+  {
+    "Country Code":"ECS",
+    "Adoption_Rate":90.9
+  },
+  {
+    "Country Code":"ECU",
+    "Adoption_Rate":77.17273115
+  },
+  {
+    "Country Code":"EGY",
+    "Adoption_Rate":74.64839935
+  },
+  {
+    "Country Code":"ESP",
+    "Adoption_Rate":95.7574516
+  },
+  {
+    "Country Code":"EST",
+    "Adoption_Rate":92.23796204
+  },
+  {
+    "Country Code":"ETH",
+    "Adoption_Rate":21.94129944
+  },
+  {
+    "Country Code":"FIN",
+    "Adoption_Rate":93.72405196
+  },
+  {
+    "Country Code":"FJI",
+    "Adoption_Rate":74.7052002
+  },
+  {
+    "Country Code":"FRA",
+    "Adoption_Rate":88.65381638
+  },
+  {
+    "Country Code":"FSM",
+    "Adoption_Rate":39.52360153
+  },
+  {
+    "Country Code":"GAB",
+    "Adoption_Rate":68.72090149
+  },
+  {
+    "Country Code":"GBR",
+    "Adoption_Rate":95.4720993
+  },
+  {
+    "Country Code":"GEO",
+    "Adoption_Rate":83.79855689
+  },
+  {
+    "Country Code":"GHA",
+    "Adoption_Rate":72.17569733
+  },
+  {
+    "Country Code":"GIN",
+    "Adoption_Rate":33.30469894
+  },
+  {
+    "Country Code":"GMB",
+    "Adoption_Rate":49.49430084
+  },
+  {
+    "Country Code":"GNB",
+    "Adoption_Rate":29.77739906
+  },
+  {
+    "Country Code":"GNQ",
+    "Adoption_Rate":63.29930115
+  },
+  {
+    "Country Code":"GRC",
+    "Adoption_Rate":86.26968886
+  },
+  {
+    "Country Code":"GRD",
+    "Adoption_Rate":70.16159821
+  },
+  {
+    "Country Code":"GTM",
+    "Adoption_Rate":60.22140121
+  },
+  {
+    "Country Code":"GUY",
+    "Adoption_Rate":83.00080109
+  },
+  {
+    "Country Code":"HIC",
+    "Adoption_Rate":93.0
+  },
+  {
+    "Country Code":"HKG",
+    "Adoption_Rate":95.75536971
+  },
+  {
+    "Country Code":"HND",
+    "Adoption_Rate":58.62269974
+  },
+  {
+    "Country Code":"HRV",
+    "Adoption_Rate":83.63240029
+  },
+  {
+    "Country Code":"HTI",
+    "Adoption_Rate":47.8614006
+  },
+  {
+    "Country Code":"HUN",
+    "Adoption_Rate":93.77898628
+  },
+  {
+    "Country Code":"IBD",
+    "Adoption_Rate":79.9
+  },
+  {
+    "Country Code":"IBT",
+    "Adoption_Rate":67.7
+  },
+  {
+    "Country Code":"IDA",
+    "Adoption_Rate":36.4
+  },
+  {
+    "Country Code":"IDB",
+    "Adoption_Rate":41.2
+  },
+  {
+    "Country Code":"IDN",
+    "Adoption_Rate":72.78075544
+  },
+  {
+    "Country Code":"IDX",
+    "Adoption_Rate":33.9
+  },
+  {
+    "Country Code":"IND",
+    "Adoption_Rate":64.9434967
+  },
+  {
+    "Country Code":"IRL",
+    "Adoption_Rate":97.18769836
+  },
+  {
+    "Country Code":"IRN",
+    "Adoption_Rate":85.3404007
+  },
+  {
+    "Country Code":"IRQ",
+    "Adoption_Rate":81.47450256
+  },
+  {
+    "Country Code":"ISL",
+    "Adoption_Rate":98.209198
+  },
+  {
+    "Country Code":"ISR",
+    "Adoption_Rate":88.18242225
+  },
+  {
+    "Country Code":"ITA",
+    "Adoption_Rate":89.2207202
+  },
+  {
+    "Country Code":"JAM",
+    "Adoption_Rate":90.10870361
+  },
+  {
+    "Country Code":"JOR",
+    "Adoption_Rate":95.62244985
+  },
+  {
+    "Country Code":"JPN",
+    "Adoption_Rate":85.54153081
+  },
+  {
+    "Country Code":"KAZ",
+    "Adoption_Rate":93.39167254
+  },
+  {
+    "Country Code":"KEN",
+    "Adoption_Rate":34.97622513
+  },
+  {
+    "Country Code":"KGZ",
+    "Adoption_Rate":92.0286026
+  },
+  {
+    "Country Code":"KHM",
+    "Adoption_Rate":68.47530365
+  },
+  {
+    "Country Code":"KIR",
+    "Adoption_Rate":89.44029999
+  },
+  {
+    "Country Code":"KNA",
+    "Adoption_Rate":76.88400269
+  },
+  {
+    "Country Code":"KOR",
+    "Adoption_Rate":97.89563777
+  },
+  {
+    "Country Code":"KWT",
+    "Adoption_Rate":99.74729919
+  },
+  {
+    "Country Code":"LAC",
+    "Adoption_Rate":81.4
+  },
+  {
+    "Country Code":"LAO",
+    "Adoption_Rate":65.59269714
+  },
+  {
+    "Country Code":"LBN",
+    "Adoption_Rate":80.63400269
+  },
+  {
+    "Country Code":"LBR",
+    "Adoption_Rate":32.23360062
+  },
+  {
+    "Country Code":"LBY",
+    "Adoption_Rate":81.95449829
+  },
+  {
+    "Country Code":"LCA",
+    "Adoption_Rate":68.20500183
+  },
+  {
+    "Country Code":"LCN",
+    "Adoption_Rate":81.7
+  },
+  {
+    "Country Code":"LDC",
+    "Adoption_Rate":31.4
+  },
+  {
+    "Country Code":"LIC",
+    "Adoption_Rate":22.5
+  },
+  {
+    "Country Code":"LIE",
+    "Adoption_Rate":98.2641983
+  },
+  {
+    "Country Code":"LKA",
+    "Adoption_Rate":54.59
+  },
+  {
+    "Country Code":"LMC",
+    "Adoption_Rate":58.9
+  },
+  {
+    "Country Code":"LSO",
+    "Adoption_Rate":51.79660034
+  },
+  {
+    "Country Code":"LTU",
+    "Adoption_Rate":89.16116293
+  },
+  {
+    "Country Code":"LUX",
+    "Adoption_Rate":98.7606147
+  },
+  {
+    "Country Code":"LVA",
+    "Adoption_Rate":92.70757011
+  },
+  {
+    "Country Code":"MAC",
+    "Adoption_Rate":89.82640076
+  },
+  {
+    "Country Code":"MAR",
+    "Adoption_Rate":91.2
+  },
+  {
+    "Country Code":"MCO",
+    "Adoption_Rate":99.04489899
+  },
+  {
+    "Country Code":"MDA",
+    "Adoption_Rate":77.3687973
+  },
+  {
+    "Country Code":"MDG",
+    "Adoption_Rate":18.67790031
+  },
+  {
+    "Country Code":"MDV",
+    "Adoption_Rate":85.23999786
+  },
+  {
+    "Country Code":"MEA",
+    "Adoption_Rate":61.5
+  },
+  {
+    "Country Code":"MEX",
+    "Adoption_Rate":83.12233799
+  },
+  {
+    "Country Code":"MHL",
+    "Adoption_Rate":65.915802
+  },
+  {
+    "Country Code":"MKD",
+    "Adoption_Rate":93.6
+  },
+  {
+    "Country Code":"MLI",
+    "Adoption_Rate":36.80149841
+  },
+  {
+    "Country Code":"MLT",
+    "Adoption_Rate":93.86029816
+  },
+  {
+    "Country Code":"MNA",
+    "Adoption_Rate":58.0
+  },
+  {
+    "Country Code":"MNE",
+    "Adoption_Rate":88.88258428
+  },
+  {
+    "Country Code":"MNG",
+    "Adoption_Rate":85.12349701
+  },
+  {
+    "Country Code":"MOZ",
+    "Adoption_Rate":20.52729988
+  },
+  {
+    "Country Code":"MRT",
+    "Adoption_Rate":45.77939987
+  },
+  {
+    "Country Code":"MUS",
+    "Adoption_Rate":73.30793533
+  },
+  {
+    "Country Code":"MWI",
+    "Adoption_Rate":18.96159935
+  },
+  {
+    "Country Code":"MYS",
+    "Adoption_Rate":98.0206059
+  },
+  {
+    "Country Code":"NAC",
+    "Adoption_Rate":94.4
+  },
+  {
+    "Country Code":"NAM",
+    "Adoption_Rate":64.87460327
+  },
+  {
+    "Country Code":"NER",
+    "Adoption_Rate":15.55760002
+  },
+  {
+    "Country Code":"NGA",
+    "Adoption_Rate":41.21139908
+  },
+  {
+    "Country Code":"NIC",
+    "Adoption_Rate":61.39550018
+  },
+  {
+    "Country Code":"NLD",
+    "Adoption_Rate":97.00679779
+  },
+  {
+    "Country Code":"NOR",
+    "Adoption_Rate":99.0
+  },
+  {
+    "Country Code":"NPL",
+    "Adoption_Rate":46.32189941
+  },
+  {
+    "Country Code":"NRU",
+    "Adoption_Rate":83.01170349
+  },
+  {
+    "Country Code":"NZL",
+    "Adoption_Rate":93.51930237
+  },
+  {
+    "Country Code":"OMN",
+    "Adoption_Rate":95.25174678
+  },
+  {
+    "Country Code":"PAK",
+    "Adoption_Rate":57.253
+  },
+  {
+    "Country Code":"PAN",
+    "Adoption_Rate":72.77149963
+  },
+  {
+    "Country Code":"PER",
+    "Adoption_Rate":81.95705992
+  },
+  {
+    "Country Code":"PHL",
+    "Adoption_Rate":67.26300914
+  },
+  {
+    "Country Code":"PLW",
+    "Adoption_Rate":83.92549896
+  },
+  {
+    "Country Code":"PNG",
+    "Adoption_Rate":18.81159973
+  },
+  {
+    "Country Code":"POL",
+    "Adoption_Rate":88.58496367
+  },
+  {
+    "Country Code":"PRT",
+    "Adoption_Rate":88.48704454
+  },
+  {
+    "Country Code":"PRY",
+    "Adoption_Rate":81.57806793
+  },
+  {
+    "Country Code":"QAT",
+    "Adoption_Rate":98.08540344
+  },
+  {
+    "Country Code":"ROU",
+    "Adoption_Rate":91.29048551
+  },
+  {
+    "Country Code":"RUS",
+    "Adoption_Rate":94.36495368
+  },
+  {
+    "Country Code":"RWA",
+    "Adoption_Rate":31.70330048
+  },
+  {
+    "Country Code":"SAS",
+    "Adoption_Rate":62.8
+  },
+  {
+    "Country Code":"SAU",
+    "Adoption_Rate":100.0
+  },
+  {
+    "Country Code":"SEN",
+    "Adoption_Rate":60.11780167
+  },
+  {
+    "Country Code":"SGP",
+    "Adoption_Rate":94.37757178
+  },
+  {
+    "Country Code":"SLB",
+    "Adoption_Rate":29.04070091
+  },
+  {
+    "Country Code":"SLE",
+    "Adoption_Rate":25.10499954
+  },
+  {
+    "Country Code":"SLV",
+    "Adoption_Rate":66.47769928
+  },
+  {
+    "Country Code":"SMR",
+    "Adoption_Rate":97.35220337
+  },
+  {
+    "Country Code":"SOM",
+    "Adoption_Rate":27.94020081
+  },
+  {
+    "Country Code":"SRB",
+    "Adoption_Rate":87.69071294
+  },
+  {
+    "Country Code":"SSA",
+    "Adoption_Rate":34.7
+  },
+  {
+    "Country Code":"SSF",
+    "Adoption_Rate":33.6
+  },
+  {
+    "Country Code":"SST",
+    "Adoption_Rate":72.5
+  },
+  {
+    "Country Code":"STP",
+    "Adoption_Rate":59.11759949
+  },
+  {
+    "Country Code":"SVK",
+    "Adoption_Rate":89.82507032
+  },
+  {
+    "Country Code":"SVN",
+    "Adoption_Rate":90.76355487
+  },
+  {
+    "Country Code":"SWE",
+    "Adoption_Rate":95.52930428
+  },
+  {
+    "Country Code":"SWZ",
+    "Adoption_Rate":63.40309906
+  },
+  {
+    "Country Code":"SYC",
+    "Adoption_Rate":87.81800079
+  },
+  {
+    "Country Code":"TCD",
+    "Adoption_Rate":12.62689972
+  },
+  {
+    "Country Code":"TEA",
+    "Adoption_Rate":86.8
+  },
+  {
+    "Country Code":"TEC",
+    "Adoption_Rate":88.9
+  },
+  {
+    "Country Code":"TGO",
+    "Adoption_Rate":39.48320007
+  },
+  {
+    "Country Code":"THA",
+    "Adoption_Rate":90.86718789
+  },
+  {
+    "Country Code":"TJK",
+    "Adoption_Rate":55.79339981
+  },
+  {
+    "Country Code":"TLA",
+    "Adoption_Rate":81.8
+  },
+  {
+    "Country Code":"TMN",
+    "Adoption_Rate":57.8
+  },
+  {
+    "Country Code":"TON",
+    "Adoption_Rate":67.4417038
+  },
+  {
+    "Country Code":"TSA",
+    "Adoption_Rate":62.8
+  },
+  {
+    "Country Code":"TSS",
+    "Adoption_Rate":33.3
+  },
+  {
+    "Country Code":"TTO",
+    "Adoption_Rate":82.15989685
+  },
+  {
+    "Country Code":"TUN",
+    "Adoption_Rate":76.5
+  },
+  {
+    "Country Code":"TUR",
+    "Adoption_Rate":87.3078767
+  },
+  {
+    "Country Code":"TZA",
+    "Adoption_Rate":31.16209984
+  },
+  {
+    "Country Code":"UGA",
+    "Adoption_Rate":8.949831061
+  },
+  {
+    "Country Code":"UKR",
+    "Adoption_Rate":82.47489929
+  },
+  {
+    "Country Code":"UMC",
+    "Adoption_Rate":86.9
+  },
+  {
+    "Country Code":"URY",
+    "Adoption_Rate":91.99109007
+  },
+  {
+    "Country Code":"USA",
+    "Adoption_Rate":94.69380188
+  },
+  {
+    "Country Code":"UZB",
+    "Adoption_Rate":89.50550079
+  },
+  {
+    "Country Code":"VCT",
+    "Adoption_Rate":76.19010162
+  },
+  {
+    "Country Code":"VEN",
+    "Adoption_Rate":76.67890167
+  },
+  {
+    "Country Code":"VNM",
+    "Adoption_Rate":84.15
+  },
+  {
+    "Country Code":"WLD",
+    "Adoption_Rate":71.2
+  },
+  {
+    "Country Code":"ZAF",
+    "Adoption_Rate":78.35759735
+  },
+  {
+    "Country Code":"ZMB",
+    "Adoption_Rate":17.10099983
+  },
+  {
+    "Country Code":"ZWE",
+    "Adoption_Rate":41.64279938
+  }
+]
