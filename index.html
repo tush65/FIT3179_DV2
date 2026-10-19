@@ -286,8 +286,7 @@
     var specVis6 =   "./ABS/v4.vg.json";
     var specVis7v1 = "./v7.1.vg.json"
     var specVis7v2 = "./v7.2.vg.json"
-    var specVis8v1 = "./v8v1.vg.json"
-    var specVis8v2 = "./v8v2.vg.json"
+    var specVis8 = "./v8.vg.json"
 
 
     vegaEmbed('#vis1', specVis1, { "actions": false });
@@ -320,12 +319,8 @@
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    vegaEmbed('#vis8', specVis8v1, { "actions": false, renderer:"canvas" }).then(function (result) {
+    vegaEmbed('#vis8', specVis8, { "actions": false, renderer:"canvas" }).then(function (result) {
       view8v1 = result.view;
-    }).catch(console.error);
-
-    vegaEmbed('#vis82', specVis8v2, { "actions": false, renderer: 'canvas' }).then(function (result) {
-      view8v2 = result.view;
     }).catch(console.error);
 
     function updateBankingMaps() {
