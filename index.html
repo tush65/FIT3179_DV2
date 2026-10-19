@@ -234,33 +234,42 @@
 
     <hr style="border: 0; border-top: 2px solid #000000; margin: 10px 0 10px 0; opacity: 1;">
 
-     <div class="pure-g">
-      <div class="pure-u-1-3">
-
-        <h1 style = "text-align: center; margin-bottom: 40px; margin-top: 25px;">Factors Influencing Access to Technology</h1>
-        <p style="margin-bottom:40px;"> Now that we have seen how internet usage shifts across age groups, let us
-          delve deeper into this by seeing how internet usage differs across broader demographics.
+    <div class="pure-g">
+      <div class="pure-u-1-1" style="text-align: center; margin-bottom: 20px;">
+        <h1 style="font-weight: 900; margin-top: 25px;">The Digital Shift in Banking: ATM Contraction (2017 - 2026)</h1>
+        <p style="margin-bottom: 20px;">
+          As Australians rapidly adopt digital payment methods, mobile apps, and instant transfer systems, physical banking touchpoints have sharply declined. 
+          Use the selector below to zoom into specific states and explore how physical ATM access points have contracted over time.
         </p>
-
-        <p style="margin-bottom: 40px;"> We can see that overall, the internet usage rate even amongst the most disadvantaged
-          demographic groups maintains a strong baseline of at least 65%, demonstrating idespread digital access across Australia.
-        </p>
-
-        <p style="margin-bottom: 40px;">
-          Household income rates creates the biggest digital divide in Australia, with around 69% access rate for the lowest income bracket,
-          and a near 100% usage rate for the highest earners. While this makes sense, some factors which are expected to play a big role,
-          such as remoteness, show only a minor difference of around 7% in the usage rate.
-        </p>
-      </div>
-      <div class="pure-u-2-3" style="margin-top: 25px;">
-        <div class="description description-right">
-          <div id="vis8" class="vis-container"></div>
+        
+        <!-- MASTER DROPDOWN SELECTOR -->
+        <div style="font-size: 16px; margin-bottom: 20px;">
+          <label for="stateSelect"><strong>Select State / Territory: </strong></label>
+          <select id="stateSelect" onchange="updateBankingMaps()" style="padding: 5px 10px; font-size: 14px;">
+            <option value="All">All Australia</option>
+            <option value="ACT">ACT</option>
+            <option value="NSW">NSW</option>
+            <option value="NT">NT</option>
+            <option value="QLD">QLD</option>
+            <option value="SA">SA</option>
+            <option value="TAS">TAS</option>
+            <option value="VIC">VIC</option>
+            <option value="WA">WA</option>
+          </select>
         </div>
       </div>
-
-      
-
     </div>
+
+<div class="pure-g">
+  <div class="pure-u-1-1">
+    <div class="description description-right">
+      <div id="vis8" class="vis-container"></div>
+    </div>
+  </div>
+
+</div>
+
+ 
 
      
 
@@ -278,6 +287,9 @@
     var specVis7v1 = "./v7.1.vg.json"
     var specVis7v2 = "./v7.2.vg.json"
     var specVis8v1 = "./v8v1.vg.json"
+    var specVis8v2 = "./v8v2.vg.json"
+
+
     vegaEmbed('#vis1', specVis1, { "actions": false });
 
     vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
@@ -308,9 +320,25 @@
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    vegaEmbed('#vis8', specVis8v1, { "actions": false }).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    vegaEmbed('#vis8', specVis8v1, { "actions": false, renderer:"canvas" }).then(function (result) {
+      view8v1 = result.view;
     }).catch(console.error);
+
+    vegaEmbed('#vis82', specVis8v2, { "actions": false, renderer: 'canvas' }).then(function (result) {
+      view8v2 = result.view;
+    }).catch(console.error);
+
+    function updateBankingMaps() {
+      var selectedState = document.getElementById('stateSelect').value;
+      
+      if (view8v1) {
+        view8v1.signal('stateSel', selectedState).run();
+      }
+      if (view8v2) {
+        view8v2.signal('stateSel', selectedState).run();
+      }
+    }
+    
   </script>
   </script>
 </body>
