@@ -24,7 +24,7 @@
         "url": "STE_2021_AUST_GDA2020.json",
         "format": {"type": "topojson", "feature": "STE_2021_AUST_GDA2020"}
       },
-      "mark": {"type": "geoshape", "fill": "#0f172a", "stroke": "white"}
+      "mark": {"type": "geoshape", "fill": "#FFFFF0", "stroke": "black"}
     },
     {
       "data": {"url": "atm_change.csv"},
@@ -41,7 +41,7 @@
           "type": "nominal",
           "scale": {
             "domain": ["Still open", "Closed", "New"],
-            "range": ["#00e5ff", "#ff2d55", "#39ff14"]
+            "range": ["#000080", "red", "green"]
           },
           "legend": {"title": "2017 to 2026"}
         },
