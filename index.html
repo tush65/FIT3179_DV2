@@ -113,11 +113,39 @@
       </div>
       <div class="pure-u-2-3">
         <div class="description description-right">
-          <div id="vis3" class="vis-container"></div>
+          <div id="vis3" class="vis-container"  style="margin-left: 10px; margin-top: 50px; overflow: visible;"></div>
         </div>
       </div>
 
     </div>
+
+     <hr style="border: 0; border-top: 2px solid #000000; margin: 10px 0 10px 0; opacity: 1;">
+     <div class="pure-g">
+      <div class="pure-u-1-3">
+
+        <h1 style = "text-align: center; margin-bottom: 40px; margin-top: 25px;">Technology Use Across Demographics</h1>
+        <p style="margin-bottom:40px;"> Let us now compare the different uses for technology across Age Group, to figure out who is the most 
+          tech savvy, and who is lagging behind.
+        </p>
+
+        <p style="margin-bottom: 40px;"> Digital engagement peaks strongly among younder demographics. Particularly,
+          those aged 18-34 dominate in areas such as banking and entertainment where usage exceeds 85%.
+        </p>
+
+        <p style="margin-bottom: 40px;">
+          Conversely, traditional sectors like formal education show a sharp decline with age, as people being to
+          do less formal education after their 20s, while health services show consistently low usage levels
+          across all demographics, highlighting key areas for future digital growth. 
+        </p>
+      </div>
+      <div class="pure-u-2-3" style="margin-top: 15px;">
+        <div class="description description-right">
+          <div id="vis5" class="vis-container"></div>
+        </div>
+      </div>
+
+    </div>
+    
 <hr style="border: 0; border-top: 2px solid #000000; margin: 10px 0 10px 0; opacity: 1;">
 
    <div class="pure-g">
@@ -148,31 +176,31 @@
     </div>
 
     <hr style="border: 0; border-top: 2px solid #000000; margin: 10px 0 10px 0; opacity: 1;">
+
      <div class="pure-g">
       <div class="pure-u-1-3">
 
-        <h1 style = "text-align: center; margin-bottom: 40px; margin-top: 25px;">Technology Use Across Demographics</h1>
-        <p style="margin-bottom:40px;"> Let us now compare the different uses for technology across Age Group, to figure out who is the most 
-          tech savvy, and who is lagging behind.
+        <h1 style = "text-align: center; margin-bottom: 40px; margin-top: 25px;">Who Uses Telehealth?</h1>
+        <p style="margin-bottom:40px;"> Now that we have seen how internet usage shifts across age groups, let us
+          delve deeper into this by seeing how internet usage differs across broader demographics.
         </p>
 
-        <p style="margin-bottom: 40px;"> Digital engagement peaks strongly among younder demographics. Particularly,
-          those aged 18-34 dominate in areas such as banking and entertainment where usage exceeds 85%.
-        </p>
-
-        <p style="margin-bottom: 40px;">
-          Conversely, traditional sectors like formal education show a sharp decline with age, as people being to
-          do less formal education after their 20s, while health services show consistently low usage levels
-          across all demographics, highlighting key areas for future digital growth. 
+        <p style="margin-bottom: 40px;"> We can see that overall, the internet usage rate even amongst the most disadvantaged
+          demographic groups maintains a strong baseline of at least 65%, demonstrating idespread digital access across Australia.
         </p>
       </div>
-      <div class="pure-u-2-3" style="margin-top: 15px;">
-        <div class="description description-right">
-          <div id="vis5" class="vis-container"></div>
-        </div>
+      <div class="pure-u-2-3" style="margin-top: 25px;">
+        <h3 style="text-align: center; margin: 0px 0 20px 50px; position: relative; top: 25px;">Telehealth Use, 2024 - 2025 (ABS)</h3>
+        <div class="description description-right" style="display: flex; gap: 20px; padding-left: 75px; padding-top: 25px;">
+          
+      <div id="vis7" class="vis-container" style="flex: 1;"></div>
+      <div id="vis72" class="vis-container" style="flex: 1;"></div>
       </div>
+    </div>
 
     </div>
+
+   
 
      <hr style="border: 0; border-top: 2px solid #000000; margin: 10px 0 10px 0; opacity: 1;">
 
@@ -200,7 +228,41 @@
         </div>
       </div>
 
+      
+
     </div>
+
+    <hr style="border: 0; border-top: 2px solid #000000; margin: 10px 0 10px 0; opacity: 1;">
+
+     <div class="pure-g">
+      <div class="pure-u-1-3">
+
+        <h1 style = "text-align: center; margin-bottom: 40px; margin-top: 25px;">Factors Influencing Access to Technology</h1>
+        <p style="margin-bottom:40px;"> Now that we have seen how internet usage shifts across age groups, let us
+          delve deeper into this by seeing how internet usage differs across broader demographics.
+        </p>
+
+        <p style="margin-bottom: 40px;"> We can see that overall, the internet usage rate even amongst the most disadvantaged
+          demographic groups maintains a strong baseline of at least 65%, demonstrating idespread digital access across Australia.
+        </p>
+
+        <p style="margin-bottom: 40px;">
+          Household income rates creates the biggest digital divide in Australia, with around 69% access rate for the lowest income bracket,
+          and a near 100% usage rate for the highest earners. While this makes sense, some factors which are expected to play a big role,
+          such as remoteness, show only a minor difference of around 7% in the usage rate.
+        </p>
+      </div>
+      <div class="pure-u-2-3" style="margin-top: 25px;">
+        <div class="description description-right">
+          <div id="vis8" class="vis-container"></div>
+        </div>
+      </div>
+
+      
+
+    </div>
+
+     
 
   </div> <!-- end page -->
 
@@ -213,6 +275,9 @@
     var specVis4 = "./ABS/v6.vg.json";
     var specVis5 =   "./ABS/v3.vg.json";
     var specVis6 =   "./ABS/v4.vg.json";
+    var specVis7v1 = "./v7.1.vg.json"
+    var specVis7v2 = "./v7.2.vg.json"
+    var specVis8v1 = "./v8v1.vg.json"
     vegaEmbed('#vis1', specVis1, { "actions": false });
 
     vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
@@ -232,6 +297,18 @@
     }).catch(console.error);
 
      vegaEmbed('#vis6', specVis6, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis7', specVis7v1, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis72', specVis7v2, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis8', specVis8v1, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>

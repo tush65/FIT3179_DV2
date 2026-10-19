@@ -25,21 +25,11 @@
     },
     {
       "name": "gravityX",
-      "value": 0.2,
-      "bind": {
-        "input": "range",
-        "min": 0,
-        "max": 1
-      }
+      "value": 0.2
     },
     {
       "name": "gravityY",
-      "value": 0.1,
-      "bind": {
-        "input": "range",
-        "min": 0,
-        "max": 1
-      }
+      "value": 0.1
     }
   ],
   "data": [

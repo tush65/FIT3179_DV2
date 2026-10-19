@@ -59,7 +59,12 @@
             "y" : {
                 "field": "category",
                 "type": "nominal",
-                "sort": ["Household Income", "Employment", "Education", "Remoteness"]
+                "sort": ["Household Income", "Employment", "Education", "Remoteness"],
+                "axis": {
+                "title": "Category",  
+                "titleX": -10,                    
+                "titleAngle": -90               
+            }
             },
             "x":{
                 "field": "low_pct",
@@ -76,7 +81,7 @@
             "type": "point",
             "filled": true,
             "size": 150,
-            "color": "#e53e3e"
+            "color": "lightgreen"
         },
         "encoding": {
             "y": {"field": "category", "type": "nominal"},

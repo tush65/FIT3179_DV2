@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 500,
+  "params": [
+    {
+  "name": "minATMs",
+  "value": 1,
+  "bind": {
+    "input": "select",
+    "name": "ATMs at location (1-28): ",
+    "options": [1, 2, 3, 4, 5, 6, 7, 8, 9, 16, 28]
+  }
+},
+    {
+      "name": "stateSel",
+      "value": "All"
+    }
+  ],
+  "projection": {
+    "type": "mercator",
+    "center": {
+      "expr": "[[134,-27],[149.05,-35.5],[147,-32.8],[133.5,-19],[145,-20],[134.5,-32],[146.5,-42.2],[145.5,-37],[121,-25]][indexof(['All','ACT','NSW','NT','QLD','SA','TAS','VIC','WA'], stateSel)]"
+    },
+    "scale": {
+    "expr": "[700,30000,2280,1680,1320,1920,6600,3360,1200][indexof(['All','ACT','NSW','NT','QLD','SA','TAS','VIC','WA'], stateSel)]"
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "STE_2021_AUST_GDA2020.json",
+        "format": {"type": "topojson", "feature": "STE_2021_AUST_GDA2020"}
+      },
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+    },
+    {
+      "data": {"url": "atm2017.csv"},
+      "transform": [
+        {"filter": "datum.Number == minATMs"},
+        {"filter": "stateSel === 'All' || datum['States and Territories'] === stateSel"}
+      ],
+      "mark": {"type": "circle", "opacity": 0.6, "color": "green", "size": 12},
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "tooltip": [
+          {"field": "Suburb or locality", "title": "Suburb"},
+          {"field": "Institution Name", "title": "Institution"},
+          {"field": "Number", "title": "ATMs at this spot"}
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A 10x10 waffle chart showing a percentage value.",
+  "title": {
+  "text": ["Proportion of people", "who use Telehealth"],
+  "anchor": "middle",
+  "fontSize": 14,
+  "lineHeight": 16,
+  "offset": 10
+},
+  "width": 200,
+  "height": 250,
+  "data": {
+    "sequence": {
+      "start": 0,
+      "stop": 100,
+      "step": 1,
+      "as": "id"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "datum.id % 10",
+      "as": "x"
+    },
+    {
+      "calculate": "floor(datum.id / 10)",
+      "as": "y"
+    },
+    {
+      "calculate": "datum.id < 23 ? 'Filled' : 'Remaining'",
+      "as": "category"
+    }
+  ],
+  "mark": {
+    "type": "square",
+    "size": 150,
+    "stroke": "white",
+    "strokeWidth": 1,
+    "align": "center"
+  },
+  "encoding": {
+    "x": {
+      "field": "x",
+      "type": "ordinal",
+      "axis": null
+    },
+    "y": {
+      "field": "y",
+      "type": "ordinal",
+      "axis": null,
+      "sort": "descending"
+    },
+    "color": {
+      "field": "category",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Filled", "Remaining"],
+        "range": ["green", "grey"]
+      },
+      "legend" : null
+    }
+  }
+}
