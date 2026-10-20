@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Internet Use by State and Territory",
-  "width": 800,
+  "width": "container",
   "height": 480,
   "projection": {"type": "mercator", "center": [134, -27], "scale": 700},
   "config": {

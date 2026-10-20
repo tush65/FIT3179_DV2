@@ -1,0 +1,57 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Most Common Types of Internet Scams",
+  "width": "container",
+  "height": 450,
+  "data": {"values": [
+      {"year": "2024", "category": "Investment", "amount": 945},
+      {"year": "2024", "category": "Romance", "amount": 156.8},
+      {"year": "2024", "category": "Payment Redirection", "amount": 152.6},
+      {"year": "2024", "category": "Remote Access", "amount": 106},
+      {"year": "2024", "category": "Phishing", "amount": 84.5},
+      {"year": "2025", "category": "Investment", "amount": 837.7},
+      {"year": "2025", "category": "Romance", "amount": 139.9},
+      {"year": "2025", "category": "Payment Redirection", "amount": 166.8},
+      {"year": "2025", "category": "Remote Access", "amount": 69.9},
+      {"year": "2025", "category": "Phishing", "amount": 97.6}
+    ]},
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": "Year"
+    },
+    "y": {
+      "field": "amount",
+      "type": "quantitative",
+      "title": "Amount ($ in Millions)"
+    },
+    "color": {
+      "field": "category",
+      "type": "nominal",
+      "title": "Scam Category",
+      "scale": {
+        "domain": [
+          "Investment",
+          "Romance",
+          "Payment Redirection",
+          "Remote Access",
+          "Phishing"
+        ],
+        "range": [
+          "#FF007F",
+          "#FF7F00",
+          "#FFE600",
+          "#00E64D",
+          "#0088FF"
+        ]
+      }
+        },
+        "tooltip": [
+      {"field": "year", "type": "ordinal", "title": "Year"},
+      {"field": "category", "type": "nominal", "title": "Category"},
+      {"field": "amount", "type": "quantitative", "format": "$,.1f", "title": "Amount ($M)"}
+    ]
+    }
+}

@@ -56,7 +56,6 @@
       }
     },
     {
-      "comment": "2. OCEAN LAYER (BUILT-IN SPHERE OR EXTERNAL TOPOJSON)",
       "data": {
         "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
         "format": {"type": "topojson", "feature": "oceans"}
