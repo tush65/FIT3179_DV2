@@ -1,471 +1,61 @@
 {
-  "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "description": "A Dorling cartogram of internet use by Australian state/territory, 2016-17 (ABS Household Use of Information Technology).",
-  "width": 700,
-  "height": 300,
-  "padding": 10,
-  "autosize": "pad",
-  "title": {
-    "text": "Internet use across Australia's states and territories, 2016-17",
-    "subtitle": [
-      "Circle area = internet users ('000 persons).  Colour = % of persons who used the internet.",
-      "Each circle is pulled toward its state's real location but pushed apart so none overlap."
-    ],
-    "anchor": "start",
-    "frame": "group",
-    "fontSize": 18,
-    "subtitleFontSize": 12,
-    "subtitleColor": "#555",
-    "subtitlePadding": 6,
-    "offset": 12
-  },
-  "signals": [
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 450,
+  "title": "Earthquakes of magnitude 4 or large between 4 Oct 2020 and 10 Oct 2020",
+  "projection": {"type": "mercator"},
+  "layer": [
     {
-      "name": "rScale",
-      "value": 0.8,
-      "bind": {
-        "input": "range",
-        "min": 0.4,
-        "max": 1.0,
-        "step": 0.05,
-        "name": "Circle size"
-      }
-    }
-  ],
-  "projections": [
+      "data": {
+        "url": "STE_2021_AUST_GDA2020.json",
+        "format": {"type": "topojson", "feature": "STE_2021_AUST_GDA2020"}
+      },
+      "mark": {"type": "geoshape", "fill": "#FFFFF0", "stroke": "black"}
+    },
     {
-      "name": "projection",
-      "type": "equalEarth",
-      "scale": 860,
-      "center": [
-        134,
-        -28
-      ],
-      "translate": [
-        {
-          "signal": "width / 2"
-        },
-        {
-          "signal": "height / 2"
-        }
-      ]
-    }
-  ],
-  "data": [
-    {
-      "name": "states",
-      "values": [
-        {
-          "code": "NSW",
-          "name": "New South Wales",
-          "users": 5268.2,
-          "nonusers": 911.8,
-          "total": 6170.9,
-          "pct": 85.4,
-          "pctNo": 14.8,
-          "lon": 146.9,
-          "lat": -32.2
-        },
-        {
-          "code": "VIC",
-          "name": "Victoria",
-          "users": 4322.5,
-          "nonusers": 571.3,
-          "total": 4907.5,
-          "pct": 88.1,
-          "pctNo": 11.6,
-          "lon": 144.7,
-          "lat": -36.9
-        },
-        {
-          "code": "QLD",
-          "name": "Queensland",
-          "users": 3231.8,
-          "nonusers": 569.5,
-          "total": 3807.1,
-          "pct": 84.9,
-          "pctNo": 15.0,
-          "lon": 144.5,
-          "lat": -22.5
-        },
-        {
-          "code": "SA",
-          "name": "South Australia",
-          "users": 1168.4,
-          "nonusers": 205.8,
-          "total": 1374.9,
-          "pct": 85.0,
-          "pctNo": 15.0,
-          "lon": 135.5,
-          "lat": -30.0
-        },
-        {
-          "code": "WA",
-          "name": "Western Australia",
-          "users": 1822.3,
-          "nonusers": 228.7,
-          "total": 2052.0,
-          "pct": 88.8,
-          "pctNo": 11.1,
-          "lon": 121.5,
-          "lat": -25.5
-        },
-        {
-          "code": "TAS",
-          "name": "Tasmania",
-          "users": 356.1,
-          "nonusers": 60.8,
-          "total": 416.9,
-          "pct": 85.4,
-          "pctNo": 14.6,
-          "lon": 146.6,
-          "lat": -42.0
-        },
-        {
-          "code": "NT",
-          "name": "Northern Territory",
-          "users": 123.4,
-          "nonusers": 17.8,
-          "total": 141.7,
-          "pct": 87.1,
-          "pctNo": 12.6,
-          "lon": 133.0,
-          "lat": -19.5
-        },
-        {
-          "code": "ACT",
-          "name": "Australian Capital Territory",
-          "users": 285.9,
-          "nonusers": 19.0,
-          "total": 305.4,
-          "pct": 93.6,
-          "pctNo": 6.2,
-          "lon": 149.0,
-          "lat": -35.5
-        }
-      ],
+      "data": {
+        "values": [
+          {"code": "NSW", "name": "New South Wales", "users": 5268.2, "nonusers": 911.8, "total": 6170.9, "pct": 85.4, "pctNo": 14.8, "lon": 146.9, "lat": -32.2},
+          {"code": "VIC", "name": "Victoria", "users": 4322.5, "nonusers": 571.3, "total": 4907.5, "pct": 88.1, "pctNo": 11.6, "lon": 144.7, "lat": -36.9},
+          {"code": "QLD", "name": "Queensland", "users": 3231.8, "nonusers": 569.5, "total": 3807.1, "pct": 84.9, "pctNo": 15.0, "lon": 144.5, "lat": -22.5},
+          {"code": "SA", "name": "South Australia", "users": 1168.4, "nonusers": 205.8, "total": 1374.9, "pct": 85.0, "pctNo": 15.0, "lon": 135.5, "lat": -30.0},
+          {"code": "WA", "name": "Western Australia", "users": 1822.3, "nonusers": 228.7, "total": 2052.0, "pct": 88.8, "pctNo": 11.1, "lon": 121.5, "lat": -25.5},
+          {"code": "TAS", "name": "Tasmania", "users": 356.1, "nonusers": 60.8, "total": 416.9, "pct": 85.4, "pctNo": 14.6, "lon": 146.6, "lat": -42.0},
+          {"code": "NT", "name": "Northern Territory", "users": 123.4, "nonusers": 17.8, "total": 141.7, "pct": 87.1, "pctNo": 12.6, "lon": 133.0, "lat": -19.5},
+          {"code": "ACT", "name": "Australian Capital Territory", "users": 285.9, "nonusers": 19.0, "total": 305.4, "pct": 93.6, "pctNo": 6.2, "lon": 149.0, "lat": -35.5}
+        ]
+      },
       "transform": [
-        {
-          "type": "geopoint",
-          "projection": "projection",
-          "fields": [
-            "lon",
-            "lat"
-          ],
-          "as": [
-            "px",
-            "py"
-          ]
-        },
-        {
-          "type": "formula",
-          "expr": "datum.px",
-          "as": "x"
-        },
-        {
-          "type": "formula",
-          "expr": "datum.py",
-          "as": "y"
-        },
-        {
-          "type": "force",
-          "static": true,
-          "iterations": 400,
-          "forces": [
-            {
-              "force": "collide",
-              "radius": {
-                "expr": "rScale * sqrt(datum.users) + 3"
+    {"calculate": "'online-work-icon.png'", "as": "icon"},
+    {"calculate": "sqrt(datum.users) * 1.2", "as": "w"},
+    {"calculate": "sqrt(datum.users) * 1.2 * 0.724", "as": "h"}
+  ],
+      "mark": {"type": "circle", "tooltip": {"content": "data"}},
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "size": {
+          "field": "users",
+          "type": "quantitative",
+          "title": "Internet users",
+          "scale": {
+          "type": "threshold",
+          "domain": [1000, 2000, 3000, 4000, 5000],
+          "range": [100, 400, 800, 1300, 1900, 2600]
               },
-              "iterations": 3
-            },
-            {
-              "force": "x",
-              "x": "px",
-              "strength": 0.15
-            },
-            {
-              "force": "y",
-              "y": "py",
-              "strength": 0.15
+              "legend": {"symbolType": "circle"}
+        },
+        "color": {
+          "field": "pct",
+          "type": "quantitative",
+          "title": "Percent of users",
+          "scale": {
+    "type": "threshold",
+        "domain": [86, 88, 90],
+  "range": ["#238B45", "#006D2C", "#005A24", "#003D19"]
+      },
+      "legend": {"symbolType": "circle"}
             }
-          ]
-        },
-        {
-          "type": "formula",
-          "expr": "rScale * sqrt(datum.users)",
-          "as": "r"
-        }
-      ]
-    },
-    {
-      "name": "big",
-      "source": "states",
-      "transform": [
-        {
-          "type": "filter",
-          "expr": "datum.r >= 22"
-        }
-      ]
-    },
-    {
-      "name": "small",
-      "source": "states",
-      "transform": [
-        {
-          "type": "filter",
-          "expr": "datum.r < 22"
-        }
-      ]
-    }
-  ],
-  "scales": [
-    {
-      "name": "color",
-      "type": "linear",
-      "domain": [
-        84,
-        94
-      ],
-      "range": {
-        "scheme": "greens"
-      },
-      "clamp": true
-    },
-    {
-      "name": "size",
-      "type": "linear",
-      "zero": true,
-      "domain": [
-        0,
-        5400
-      ],
-      "range": [
-        0,
-        {
-          "signal": "PI * rScale * rScale * 5400"
-        }
-      ]
-    }
-  ],
-  "legends": [
-    {
-      "fill": "color",
-      "type": "gradient",
-      "title": "Used the internet (% of persons 15+)",
-      "orient": "none",
-      "legendX": 10,
-      "legendY": 200,
-      "direction": "horizontal",
-      "gradientLength": 180,
-      "gradientThickness": 10,
-      "format": ".0f",
-      "titleFontSize": 10,
-      "labelFontSize": 10,
-      "titleLimit": 300
-    },
-    {
-      "size": "size",
-      "type": "symbol",
-      "title": "Internet users ('000)",
-      "orient": "none",
-      "legendX": 10,
-      "legendY": 250,
-      "direction": "horizontal",
-      "values": [
-        100,
-        1000,
-        5000
-      ],
-      "format": ",.0f",
-      "symbolType": "circle",
-      "symbolFillColor": "transparent",
-      "symbolStrokeColor": "#555",
-      "symbolStrokeWidth": 1,
-      "columnPadding": 15,
-      "titleFontSize": 10,
-      "labelFontSize": 10,
-      "titleLimit": 300
-    }
-  ],
-  "marks": [
-    {
-      "type": "symbol",
-      "name": "circles",
-      "from": {
-        "data": "states"
-      },
-      "encode": {
-        "enter": {
-          "shape": {
-            "value": "circle"
-          },
-          "stroke": {
-            "value": "#ffffff"
-          },
-          "strokeWidth": {
-            "value": 1.5
-          },
-          "tooltip": {
-            "signal": "{title: datum.name, \"Internet users ('000)\": format(datum.users, ',.1f'), 'Used the internet (%)': datum.pct, 'Did not use (%)': datum.pctNo}"
-          }
-        },
-        "update": {
-          "x": {
-            "field": "x"
-          },
-          "y": {
-            "field": "y"
-          },
-          "size": {
-            "scale": "size",
-            "field": "users"
-          },
-          "fill": {
-            "scale": "color",
-            "field": "pct"
-          },
-          "fillOpacity": {
-            "value": 1
-          }
-        },
-        "hover": {
-          "stroke": {
-            "value": "#222"
-          },
-          "strokeWidth": {
-            "value": 2.5
-          }
-        }
-      }
-    },
-    {
-      "type": "text",
-      "name": "bigCode",
-      "from": {
-        "data": "big"
-      },
-      "interactive": false,
-      "encode": {
-        "update": {
-          "x": {
-            "field": "x"
-          },
-          "y": {
-            "signal": "datum.y - 7"
-          },
-          "text": {
-            "field": "code"
-          },
-          "align": {
-            "value": "center"
-          },
-          "baseline": {
-            "value": "middle"
-          },
-          "fontWeight": {
-            "value": "bold"
-          },
-          "fontSize": {
-            "value": 13
-          },
-          "fill": {
-            "value": "#1a1a1a"
-          }
-        }
-      }
-    },
-    {
-      "type": "text",
-      "name": "bigPct",
-      "from": {
-        "data": "big"
-      },
-      "interactive": false,
-      "encode": {
-        "update": {
-          "x": {
-            "field": "x"
-          },
-          "y": {
-            "signal": "datum.y + 9"
-          },
-          "text": {
-            "signal": "format(datum.pct, '.1f') + '%'"
-          },
-          "align": {
-            "value": "center"
-          },
-          "baseline": {
-            "value": "middle"
-          },
-          "fontSize": {
-            "value": 12
-          },
-          "fill": {
-            "value": "#1a1a1a"
-          }
-        }
-      }
-    },
-    {
-      "type": "text",
-      "name": "smallLabel",
-      "from": {
-        "data": "small"
-      },
-      "interactive": false,
-      "encode": {
-        "update": {
-          "x": {
-            "signal": "datum.x + datum.r + 6"
-          },
-          "y": {
-            "field": "y"
-          },
-          "text": {
-            "signal": "datum.code + '  ' + format(datum.pct, '.1f') + '%'"
-          },
-          "align": {
-            "value": "left"
-          },
-          "baseline": {
-            "value": "middle"
-          },
-          "fontSize": {
-            "value": 12
-          },
-          "fontWeight": {
-            "value": "bold"
-          },
-          "fill": {
-            "value": "#1a1a1a"
-          }
-        }
-      }
-    },
-    {
-      "type": "text",
-      "name": "source",
-      "interactive": false,
-      "encode": {
-        "update": {
-          "x": {
-            "value": 0
-          },
-          "y": {
-            "signal": "height + 90"
-          },
-          "text": {
-            "value": "Source: ABS, Household Use of Information Technology, 2016–17. "
-          },
-          "fontSize": {
-            "value": 10
-          },
-          "fill": {
-            "value": "#666"
-          }
-        }
       }
     }
   ]
