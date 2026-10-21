@@ -1,0 +1,48 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Share of social media users rating each feature important.",
+  "width": 420,
+  "height": 420,
+  "data": {
+    "values": [
+      {"feature": "Reading private messages", "value": 71},
+      {"feature": "Posts of people/topics I follow", "value": 62},
+      {"feature": "Posts shared privately with me", "value": 60},
+      {"feature": "Reading comments", "value": 42},
+      {"feature": "Posts suggested by the platform", "value": 29}
+    ]
+  },
+  "layer": [
+    {
+      "mark": {"type": "arc", "outerRadius": 200, "stroke": "#fff"},
+      "encoding": {
+        "theta": {"field": "value", "type": "quantitative", "stack": true},
+        "color": {
+          "field": "feature",
+          "type": "nominal",
+          "sort": null,
+          "title": "Feature",
+          "legend": {"orient": "right", "labelFontSize": 13, "titleFontSize": 13, "symbolSize": 200, "labelLimit": 0},
+          "scale": {"range": ["#3182bd", "#e6550d", "#31a354", "#756bb1", "#636363"]}
+        },
+        "order": {"field": "value", "type": "quantitative", "sort": "descending"},
+        "tooltip": [
+          {"field": "feature", "type": "nominal", "title": "Feature"},
+          {"field": "value", "type": "quantitative", "title": "% rate important"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "radius": 135, "fontSize": 16, "fontWeight": "bold", "color": "#fff"},
+      "encoding": {
+        "theta": {"field": "value", "type": "quantitative", "stack": true},
+        "order": {"field": "value", "type": "quantitative", "sort": "descending"},
+        "text": {"field": "label", "type": "nominal"}
+      },
+      "transform": [
+        {"calculate": "datum.value + '%'", "as": "label"}
+      ]
+    }
+  ],
+  "view": {"stroke": null}
+}

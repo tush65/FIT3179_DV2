@@ -1,0 +1,156 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Treemap of reasons for social media use.",
+  "width": 800,
+  "height": 600,
+  "padding": 2.5,
+  "autosize": "none",
+
+  "signals": [
+     {"name": "layout", "value": "squarify"},
+  {"name": "aspectRatio", "value": 1.2}
+  ],
+
+  "data": [
+    {
+      "name": "tree",
+      "values": [
+        {"id": "root", "name": "Platforms"},
+
+        {"id": "fb", "name": "Facebook", "parent": "root"},
+        {"id": "fb-dm", "name": "Messenger", "parent": "fb", "size": 79},
+        {"id": "fb-feed", "name": "Feed", "parent": "fb", "size": 60},
+        {"id": "fb-follow", "name": "Groups", "parent": "fb", "size": 55},
+        {"id": "fb-shared", "name": "Marketplace", "parent": "fb", "size": 44},
+        {"id": "fb-reels", "name": "Reels", "parent": "fb", "size": 44},
+
+        {"id": "ig", "name": "Instagram", "parent": "root"},
+        {"id": "ig-dm", "name": "Direct Messages", "parent": "ig", "size": 76},
+        {"id": "ig-feed", "name": "Feed", "parent": "ig", "size": 70},
+        {"id": "ig-stories", "name": "Stories", "parent": "ig", "size": 66},
+        {"id": "ig-reels", "name": "Reels", "parent": "ig", "size": 56},
+        {"id": "ig-explore", "name": "Explore Page", "parent": "ig", "size": 36},
+
+        {"id": "sc", "name": "Snapchat", "parent": "root"},
+        {"id": "sc-chat", "name": "Chat", "parent": "sc", "size": 84},
+        {"id": "sc-map", "name": "Map", "parent": "sc", "size": 45},
+        {"id": "sc-stories", "name": "Stories", "parent": "sc", "size": 45},
+        {"id": "sc-discover", "name": "Discover Page", "parent": "sc", "size": 20},
+        {"id": "sc-spotlight", "name": "Spotlight", "parent": "sc", "size": 19},
+
+        {"id": "tt", "name": "Tiktok", "parent": "root"},
+        {"id": "tt-fyp", "name": "For You Page", "parent": "tt", "size": 75},
+        {"id": "tt-search", "name": "Search bar", "parent": "tt", "size": 71},
+        {"id": "tt-following", "name": "Following Page", "parent": "tt", "size": 56},
+        {"id": "tt-inbox", "name": "Discover Page", "parent": "tt", "size": 47},
+        {"id": "tt-stories", "name": "Stories", "parent": "tt", "size": 47}
+      ],
+      "transform": [
+        {"type": "stratify", "key": "id", "parentKey": "parent"},
+        {
+          "type": "treemap",
+          "field": "size",
+          "sort": {"field": "value"},
+          "round": true,
+          "method": "squarify",
+          "ratio": 1.5,
+          "size": [{"signal": "width"}, {"signal": "height"}]
+        }
+      ]
+    },
+    {
+      "name": "nodes",
+      "source": "tree",
+      "transform": [{"type": "filter", "expr": "datum.children"}]
+    },
+    {
+      "name": "leaves",
+      "source": "tree",
+      "transform": [{"type": "filter", "expr": "!datum.children"}]
+    },
+    {
+        "name": "sections",
+        "source": "tree",
+        "transform": [{"type": "filter", "expr": "datum.depth === 1"}]
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": ["Facebook", "Instagram", "Snapchat", "Tiktok"],
+      "range": ["#1877F2",   "#FF8C69",   "#FFFC00",   "#2b2b2b"]
+    },
+    {"name": "size", "type": "ordinal", "domain": [0, 1, 2, 3], "range": [256, 28, 20, 14]},
+    {"name": "opacity", "type": "ordinal", "domain": [0, 1, 2, 3], "range": [0.15, 0.5, 0.8, 1.0]}
+  ],
+
+  "marks": [
+    {
+      "type": "rect",
+      "from": {"data": "nodes"},
+      "interactive": false,
+      "encode": {
+        "enter": {"fill": {"scale": "color", "field": "name"}},
+        "update": {"x": {"field": "x0"}, "y": {"field": "y0"}, "x2": {"field": "x1"}, "y2": {"field": "y1"}}
+      }
+    },
+    {
+      "type": "rect",
+      "from": {"data": "leaves"},
+      "encode": {
+        "enter": {
+          "stroke": {"signal": "datum.parent === 'sc' ? '#000000' : '#ffffff'"},
+          "tooltip": {"signal": "datum.name + ': ' + datum.size + '%'"}
+        },
+        "update": {
+          "x": {"field": "x0"}, "y": {"field": "y0"}, "x2": {"field": "x1"}, "y2": {"field": "y1"},
+          "fill": {"value": "transparent"}
+        },
+        "hover": {"fill": {"value": "red"}}
+      }
+    },
+    {
+  "type": "text",
+  "from": {"data": "sections"},
+  "interactive": false,
+  "encode": {
+    "enter": {
+      "font": {"value": "Helvetica Neue, Arial"},
+      "fontWeight": {"value": "bold"},
+      "fontSize": {"value": 14},
+      "align": {"value": "left"},
+      "baseline": {"value": "top"},
+      "fill": {"signal": "datum.id === 'tt' ? '#ffffff' : '#000000'"},
+      "text": {"field": "name"}
+    },
+    "update": {
+      "x": {"signal": "datum.x0 + 6"},
+      "y": {"signal": "datum.y0 + 6"},
+      "limit": {"signal": "datum.x1 - datum.x0 - 12"},
+      "ellipsis": {"value": "…"}
+    }
+  }
+},
+    {
+      "type": "text",
+      "from": {"data": "leaves"},
+      "interactive": false,
+      "encode": {
+        "enter": {
+          "font": {"value": "Helvetica Neue, Arial"},
+          "align": {"value": "center"},
+          "baseline": {"value": "middle"},
+          "fill": {"signal": "datum.parent === 'tt' ? '#ffffff' : '#000000'"},
+          "fontSize": {"value": 12},
+          "text": {"field": "name"}
+        },
+        "update": {
+          "x": {"signal": "0.5 * (datum.x0 + datum.x1)"},
+          "y": {"signal": "0.5 * (datum.y0 + datum.y1)"}
+        }
+      }
+    }
+  ]
+}
