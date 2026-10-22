@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Share of social media users rating each feature important.",
-  "width": 420,
+  "width": "container",
   "height": 420,
   "data": {
     "values": [
@@ -14,7 +14,7 @@
   },
   "layer": [
     {
-      "mark": {"type": "arc", "outerRadius": 200, "stroke": "#fff"},
+      "mark": {"type": "arc", "outerRadius": 150, "stroke": "#fff"},
       "encoding": {
         "theta": {"field": "value", "type": "quantitative", "stack": true},
         "color": {
@@ -33,7 +33,7 @@
       }
     },
     {
-      "mark": {"type": "text", "radius": 135, "fontSize": 16, "fontWeight": "bold", "color": "#fff"},
+      "mark": {"type": "text", "radius": 100, "fontSize": 16, "fontWeight": "bold", "color": "#fff"},
       "encoding": {
         "theta": {"field": "value", "type": "quantitative", "stack": true},
         "order": {"field": "value", "type": "quantitative", "sort": "descending"},
