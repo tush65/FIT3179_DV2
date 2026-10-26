@@ -36,8 +36,23 @@
     {
       "name": "rings",
       "values": [{"level": 40}, {"level": 60}, {"level": 80}, {"level": 100}]
-    }
+    },
+    {
+      "name": "arrows",
+      "values": [
+        {"x": -30, "y": -13, "x2": -85, "y2": -13},
+    {"x": -58, "y": 29, "x2": -85, "y2": 29},
+    {"x": -85, "y": 29, "x2": -85, "y2": -32}
+      ]
+    },
+    {
+  "name": "arrowhead",
+  "values": [
+     {"x": -85, "y": -38}
+  ]
+}
   ],
+  
 
   "scales": [
     {
@@ -171,6 +186,63 @@
           "fontWeight": {"value": "bold"},
           "fontSize": {"value": 12},
           "fill": {"value": "#1e293b"}
+        }
+      }
+    },
+      {
+      "type": "text",
+      "name": "annotation-paragraph",
+      "zindex": 3,
+      "encode": {
+        "enter": {
+         "x": {"value": -85},
+          "y": {"value": -100},
+          "text": {
+            "value": [
+             "These sectors",
+             "are the outliers",
+             "since these fields",
+             "are more traditional",
+             "on in person components"
+              
+            ]
+          },
+          "align": {"value": "center"},
+          "baseline": {"value": "bottom"},
+          "fontSize": {"value": 11},
+          "lineHeight": {"value": 14},
+          "fill": {"value": "#475569"}
+        }
+      }
+    },
+    {
+      "type": "rule",
+      "name": "arrow-lines",
+      "from": {"data": "arrows"},
+      "zindex": 3,
+      "encode": {
+        "enter": {
+          "x": {"field": "x"},
+          "y": {"field": "y"},
+          "x2": {"field": "x2"},
+          "y2": {"field": "y2"},
+          "stroke": {"value": "#475569"},
+          "strokeWidth": {"value": 1.5}
+        }
+      }
+    },
+    {
+      "type": "symbol",
+      "name": "arrow-heads",
+      "from": {"data": "arrowhead"},
+      "zindex": 3,
+      "encode": {
+        "enter": {
+          "x": {"field": "x"},
+          "y": {"field": "y"},
+          "shape": {"value": "triangle-up"},
+          "size": {"value": 70},
+          "fill": {"value": "#475569"}
         }
       }
     }
