@@ -5,7 +5,7 @@
     "author": "David Bacci",
     "github": "https://github.com/PBI-David/Deneb-Showcase"
   },
-  "width": 500,
+  "width": 760,
   "height": 500,
   "padding": {
     "left": 5,
@@ -17,7 +17,7 @@
   "signals": [
     {
       "name": "cx",
-      "update": "width / 2"
+      "update": "250"
     },
     {
       "name": "cy",
@@ -30,7 +30,10 @@
     {
       "name": "gravityY",
       "value": 0.1
-    }
+    },
+    { "name": "arrowAngle", "value": 160 },
+{ "name": "arrowLen", "value": 60 },
+{ "name": "textDX", "value": 0 }
   ],
   "data": [
     {
@@ -192,6 +195,53 @@
         }
       ]
     },
+    {
+  "type": "rule",
+  "from": { "data": "nodes" },
+  "encode": {
+    "update": {
+      "x": { "signal": "datum.x + cos(arrowAngle * PI / 180) * sqrt(datum.size) / 2" },
+      "y": { "signal": "datum.y + sin(arrowAngle * PI / 180) * sqrt(datum.size) / 2" },
+      "x2": { "signal": "datum.x + cos(arrowAngle * PI / 180) * (sqrt(datum.size) / 2 + arrowLen)" },
+      "y2": { "signal": "datum.y + sin(arrowAngle * PI / 180) * (sqrt(datum.size) / 2 + arrowLen)" },
+      "stroke": { "value": "#555" },
+      "strokeWidth": { "value": 1.5 },
+      "opacity": { "signal": "datum.datum.category === 'Clothing' ? 1 : 0" }
+    }
+  }
+},
+{
+  "type": "symbol",
+  "from": { "data": "nodes" },
+  "encode": {
+    "update": {
+      "x": { "signal": "datum.x + cos(arrowAngle * PI / 180) * (sqrt(datum.size) / 2 + arrowLen)" },
+      "y": { "signal": "datum.y + sin(arrowAngle * PI / 180) * (sqrt(datum.size) / 2 + arrowLen)" },
+      "shape": { "value": "triangle-right" },
+      "angle": { "signal": "arrowAngle" },
+      "size": { "value": 60 },
+      "fill": { "value": "#555" },
+      "opacity": { "signal": "datum.datum.category === 'Clothing' ? 1 : 0" }
+    }
+  }
+},
+{
+  "type": "text",
+  "from": { "data": "nodes" },
+  "encode": {
+    "update": {
+      "x": { "signal": "datum.x + cos(arrowAngle * PI / 180) * (sqrt(datum.size) / 2 + arrowLen) + textDX" },
+      "y": { "signal": "datum.y + sin(arrowAngle * PI / 180) * (sqrt(datum.size) / 2 + arrowLen) + 12" },
+      "align": { "value": "center" },
+      "baseline": { "value": "top" },
+      "fontSize": { "value": 12 },
+      "fontStyle": { "value": "italic" },
+      "fill": { "value": "black" },
+      "text": { "value": ["Clothing is physical,", "yet nearly half", "still buy it online.", "This is an", "exception to", "other items", "like cars", "and electronics."] },
+      "opacity": { "signal": "datum.datum.category === 'Clothing' ? 1 : 0" }
+    }
+  }
+},
     {
       "type": "text",
       "from": {

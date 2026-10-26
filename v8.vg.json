@@ -54,6 +54,20 @@
           {"field": "status", "title": "Status"}
         ]
       }
-    }
+    },
+    {
+  "data": { "values": [{}] },
+  "mark": {
+    "type": "text",
+    "x": 10,
+    "y": 10,
+    "align": "left",
+    "baseline": "top",
+    "fontSize": 13,
+    "color": "black",
+    "text": ["Urban areas", "have much more", "concentrated closures", "whilst regional areas", 
+  "still have ATMS open", "and new ones", "opening up", "due to ATMS", "being a lifeline", "in those areas"]
+  }
+}
   ]
 }

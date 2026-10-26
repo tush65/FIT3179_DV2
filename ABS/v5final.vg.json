@@ -8,24 +8,22 @@
   "width": "container",
   "height": 550,
   "data": { "url": "ABS/technology_usage_processed.csv" },
-  "encoding": {
-    "x": {
-      "field": "Age Group",
-      "type": "ordinal",
-      "title": "Age Group",
-      "sort": ["15–17", "18–24", "25–34", "35–44", "45–54", "55–64", "65 or over"],
-      "axis": { "labelAngle": 0 }
-    },
-    "y": {
-      "field": "Activity",
-      "type": "nominal",
-      "title": "Activity Category"
-    }
-  },
   "layer": [
     {
       "mark": "rect",
       "encoding": {
+         "x": {
+          "field": "Age Group",
+          "type": "ordinal",
+          "title": "Age Group",
+          "sort": ["15–17", "18–24", "25–34", "35–44", "45–54", "55–64", "65 or over"],
+          "axis": { "labelAngle": 0 }
+        },
+         "y": {
+          "field": "Activity",
+          "type": "nominal",
+          "title": "Activity Category"
+        },
         "color": {
           "field": "Percentage",
           "type": "quantitative",
@@ -48,6 +46,15 @@
         "baseline": "middle"
       },
       "encoding": {
+        "x": {
+          "field": "Age Group",
+          "type": "ordinal",
+          "sort": ["15–17", "18–24", "25–34", "35–44", "45–54", "55–64", "65 or over"]
+        },
+        "y": {
+          "field": "Activity",
+          "type": "nominal"
+        },
         "text": { "field": "Percentage", "type": "quantitative", "format": ".1f" },
         "color": {
           "condition": {
@@ -57,6 +64,39 @@
           "value": "black"
         }
       }
+    },
+     {
+      "data": { "values": [{}] },
+      "mark": {
+        "type": "text",
+        "x": "width",
+        "y": 350,
+        "dx": 20,
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 11,
+        "fontStyle": "italic",
+        "color": "black",
+        "text": ["Teens lead on" , "social and study," , "but bank least:",  "access, not ability"  , "drives the gap.",
+          "Health is the", "one activity" , "no age group",  "fully embraces:", "a gap for",  "digital growth."]
+      }
+    },
+    {
+      "data": { "values": [{}] },
+      "mark": {
+        "type": "text",
+        "x": "width",
+        "y": "height",
+        "dy": 55,
+        "align": "right",
+        "baseline": "top",
+        "fontSize": 11,
+        "fontStyle": "italic",
+        "color": "black",
+        "text": "Source: ABS, Household Use of Information Technology, 2016–17"
+      }
     }
   ]
 }
+
+     

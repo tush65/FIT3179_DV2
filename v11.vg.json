@@ -1,8 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "What Australians Do On Social Media",
+    "subtitle": "Share of users who do each activity (people could choose more than one)",
+    "anchor": "start",
+    "fontSize": 16,
+    "subtitleFontStyle": "italic"
+  },
   "description": "Share of social media users rating each feature important.",
-  "width": "container",
-  "height": 420,
   "data": {
     "values": [
       {"feature": "Reading private messages", "value": 71},
@@ -12,37 +17,64 @@
       {"feature": "Posts suggested by the platform", "value": 29}
     ]
   },
-  "layer": [
+  "transform": [
     {
-      "mark": {"type": "arc", "outerRadius": 150, "stroke": "#fff"},
-      "encoding": {
-        "theta": {"field": "value", "type": "quantitative", "stack": true},
-        "color": {
-          "field": "feature",
-          "type": "nominal",
-          "sort": null,
-          "title": "Feature",
-          "legend": {"orient": "right", "labelFontSize": 13, "titleFontSize": 13, "symbolSize": 200, "labelLimit": 0},
-          "scale": {"range": ["#3182bd", "#e6550d", "#31a354", "#756bb1", "#636363"]}
-        },
-        "order": {"field": "value", "type": "quantitative", "sort": "descending"},
-        "tooltip": [
-          {"field": "feature", "type": "nominal", "title": "Feature"},
-          {"field": "value", "type": "quantitative", "title": "% rate important"}
-        ]
-      }
+      "calculate": "[{'part': 'Used', 'val': datum.value, 'ord': 0}, {'part': 'Rest', 'val': 100 - datum.value, 'ord': 1}]",
+      "as": "parts"
     },
-    {
-      "mark": {"type": "text", "radius": 100, "fontSize": 16, "fontWeight": "bold", "color": "#fff"},
-      "encoding": {
-        "theta": {"field": "value", "type": "quantitative", "stack": true},
-        "order": {"field": "value", "type": "quantitative", "sort": "descending"},
-        "text": {"field": "label", "type": "nominal"}
+    {"flatten": ["parts"]},
+    {"calculate": "datum.parts.part", "as": "part"},
+    {"calculate": "datum.parts.val", "as": "val"},
+    {"calculate": "datum.parts.ord", "as": "ord"}
+  ],
+  "facet": {
+    "field": "feature",
+    "type": "nominal",
+    "header": {
+      "title": null,
+      "labelFontSize": 11,
+      "labelFontWeight": "bold",
+      "labelLimit": 180
+    }
+  },
+  "columns": 3,
+  "spec": {
+    "width": 120,
+    "height": 120,
+    "mark": {
+      "type": "arc",
+      "innerRadius": 35,
+      "outerRadius": 55,
+      "stroke": "#fff",
+      "strokeWidth": 1
+    },
+    "encoding": {
+      "theta": {
+        "field": "val",
+        "type": "quantitative",
+        "stack": true
       },
-      "transform": [
-        {"calculate": "datum.value + '%'", "as": "label"}
+      "order": {
+        "field": "ord",
+        "type": "quantitative"
+      },
+      "color": {
+        "field": "part",
+        "type": "nominal",
+        "scale": {"domain": ["Used", "Rest"],
+          "range": ["#3182bd", "#e5e5e5"]
+        },
+        "legend": null
+      },
+      "tooltip": [
+        {"field": "feature", "type": "nominal", "title": "Activity"},
+        {"field": "value", "type": "quantitative", "title": "% of Users"}
       ]
     }
-  ],
-  "view": {"stroke": null}
+  },
+  "resolve": {
+    "scale": {
+      "color": "shared"
+    }
+  }
 }
