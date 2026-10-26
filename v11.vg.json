@@ -3,9 +3,10 @@
   "title": {
     "text": "What Australians Do On Social Media",
     "subtitle": "Share of users who do each activity (people could choose more than one)",
-    "anchor": "start",
+    "anchor": "middle",
     "fontSize": 16,
-    "subtitleFontStyle": "italic"
+    "subtitleFontStyle": "italic",
+    "dy" : -15
   },
   "description": "Share of social media users rating each feature important.",
   "data": {
@@ -37,10 +38,10 @@
       "labelLimit": 180
     }
   },
-  "columns": 3,
+  "columns": 5,
   "spec": {
-    "width": 120,
-    "height": 120,
+    "width": 45,
+    "height": 110,
     "mark": {
       "type": "arc",
       "innerRadius": 35,
@@ -75,6 +76,11 @@
   "resolve": {
     "scale": {
       "color": "shared"
+    }
+  },
+  "config": {
+    "view": {
+      "stroke": null
     }
   }
 }
