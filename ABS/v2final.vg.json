@@ -20,7 +20,7 @@
         "url": "STE_2021_AUST_GDA2020.json",
         "format": {"type": "topojson", "feature": "STE_2021_AUST_GDA2020"}
       },
-      "mark": {"type": "geoshape", "fill": "#e2e8f0", "stroke": "white"}
+      "mark": {"type": "geoshape", "fill": "#e2e8f0", "stroke": "black"}
     },
     {
       "data": {
