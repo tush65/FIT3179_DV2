@@ -31,7 +31,11 @@
           "scale": {
             "scheme": "greens",
             "domain": [0, 100]
-          }
+          },
+          "legend": {
+  "orient": "right",
+  "title": [" ", " ", " ", " ", "Usage (%)"]
+}
         },
         "tooltip": [
           { "field": "Age Group", "type": "nominal" },
@@ -75,7 +79,7 @@
         "align": "left",
         "baseline": "top",
         "fontSize": 11,
-        "fontStyle": "italic",
+
         "color": "black",
         "text": ["Teens lead on" , "social and study," , "but bank least:",  "access, not ability"  , "drives the gap.",
           "Health is the", "one activity" , "no age group",  "fully embraces:", "a gap for",  "digital growth."]

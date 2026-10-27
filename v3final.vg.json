@@ -211,7 +211,7 @@
           "baseline": {"value": "bottom"},
           "fontSize": {"value": 11},
           "lineHeight": {"value": 14},
-          "fill": {"value": "#475569"}
+          "fill": {"value": "black"}
         }
       }
     },

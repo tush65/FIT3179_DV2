@@ -111,7 +111,7 @@
         "align": "left",
         "baseline": "top",
         "fontSize": 11,
-        "color": "#475569",
+        "color": "black",
         "lineHeight": 14
       },
       "encoding": {
@@ -131,7 +131,7 @@
     "align": "right",
     "baseline": "top",
     "fontSize": 11,
-    "color": "#475569",
+    "color": "black",
     "lineHeight": 14
   },
   "encoding": {

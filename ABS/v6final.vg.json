@@ -81,7 +81,7 @@
             "type": "point",
             "filled": true,
             "size": 150,
-            "color": "lightgreen"
+            "color": "#66bb6a"
         },
         "encoding": {
             "y": {"field": "category", "type": "nominal"},
@@ -154,7 +154,7 @@
         "align": "left",
         "dx": -6,
         "dy": 34,
-        "color": "#4a5568",
+        "color": "black",
         "fontWeight": "bold",
         "fontSize": 12,
         "text": "Work status matters as much as pay"
@@ -173,7 +173,7 @@
         "baseline": "top",
         "dx": -6,
         "dy": 44,
-        "color": "#4a5568",
+        "color": "black",
         "fontStyle": "italic",
         "fontSize": 11,
         "lineHeight": 14,
