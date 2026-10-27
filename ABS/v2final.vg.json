@@ -7,7 +7,7 @@
   "subtitleColor": "black"
 },
   "width": "container",
-  "height": 575,
+  "height": 600,
   "projection": {"type": "mercator", "center": [134, -27], "scale": 700},
   "config": {
     "legend": {

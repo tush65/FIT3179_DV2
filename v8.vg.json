@@ -7,7 +7,7 @@
   "subtitleColor": "black"
 },
   "width": "container",
-  "height": 575,
+  "height": 600,
   "params": [
     {
       "name": "stateSel",
