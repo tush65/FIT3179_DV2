@@ -8,7 +8,8 @@
 
   "title": {
     "text": "Australian Everyday Digital Life Profile (2016-2017)",
-    "subtitle": "Household participation rate (%) across daily digital activities",
+    "subtitle": ["Household participation rate (%) across daily digital activities",
+    "Source: ABS, Household Use of Information Technology, 2016-17"],
     "anchor": "middle",
     "fontSize": 16,
     "subtitleFontSize": 12,

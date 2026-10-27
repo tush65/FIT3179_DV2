@@ -1,6 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Internet Use by State and Territory",
+  "title": {
+  "text": "Internet Use by State and Territory",
+  "subtitle": ["Source: ABS, Household Use of Information Technology, 2016-17"],
+  "subtitleFontSize": 12,
+  "subtitleColor": "black"
+},
   "width": "container",
   "height": 480,
   "projection": {"type": "mercator", "center": [134, -27], "scale": 700},

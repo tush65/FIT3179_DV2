@@ -5,6 +5,7 @@
   "height": 600,
   "title": {
     "text": "Most Used features of Each Social Media App, as a Treemap",
+    "subtitle" : "Source: QUT, 2026",
     "fontSize": 16,
     "orient" : "top",
     "offset": 50

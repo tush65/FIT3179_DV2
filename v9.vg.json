@@ -1,6 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Most Common Types of Internet Scams",
+  "title": {
+  "text": "Most Common Types of Internet Scams",
+  "subtitle": "Source: ScamWatch",
+  "subtitleFontSize": 12,
+  "subtitleColor": "#444"
+},
   "width": "container",
   "height": 450,
   "data": {"values": [

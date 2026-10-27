@@ -2,7 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "What Australians Do On Social Media",
-    "subtitle": "Share of users who do each activity (people could choose more than one)",
+    "subtitle": ["Share of users who do each activity (people could choose more than one)",
+    "Source: QUT, 2026"],
     "anchor": "middle",
     "fontSize": 16,
     "subtitleFontStyle": "italic",

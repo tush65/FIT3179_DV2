@@ -1,6 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "ATM Locations: What Happened Between 2017 and 2026",
+  "title": {
+  "text": "ATM Locations: What Happened Between 2017 and 2026",
+  "subtitle": "Source: Australian Prudential Regulation Authority, 2026",
+  "subtitleFontSize": 12,
+  "subtitleColor": "black"
+},
   "width": "container",
   "height": 500,
   "params": [

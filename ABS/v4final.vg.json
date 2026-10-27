@@ -1,12 +1,22 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "description": "A packed bubble chart.",
+  "title": {
+  "text": "What Do Australians Shop For Online?",
+  "subtitle": ["Percentage of Australians who purchased each category online", "Source: ABS, Household Use of Information Technology, 2016-17"],
+  "anchor": "start",
+  "dx" : 120,
+  "fontSize": 18,
+  "subtitleFontSize": 12,
+  "subtitleColor": "#444",
+  "offset": 10
+},
   "width": 760,
   "height": 500,
   "padding": {
     "left": 5,
     "right": 5,
-    "top": 20,
+    "top": 70,
     "bottom": 0
   },
   "autosize": "none",

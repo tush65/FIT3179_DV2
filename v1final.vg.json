@@ -4,7 +4,8 @@
   "height": 450,
   "title": {
     "text": "Global Internet Adoption Rate",
-    "subtitle": "Percentage of population using the internet across tracked nations"
+    "subtitle":[ "Percentage of population using the internet across tracked nations",
+    "Source: World Bank (n.d.)"]
   },
   "projection": {
     "type": "equalEarth"
