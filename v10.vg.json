@@ -3,8 +3,14 @@
   "description": "Treemap of reasons for social media use.",
   "width": 800,
   "height": 600,
-  "padding": 2.5,
-  "autosize": "none",
+  "title": {
+    "text": "Most Used features of Each Social Media App, as a Treemap",
+    "fontSize": 16,
+    "orient" : "top",
+    "offset": 50
+  },
+  "padding": {"top": 50, "left": 5, "right": 5, "bottom": 5},
+  "autosize": "pad",
 
   "signals": [
      {"name": "layout", "value": "squarify"},
@@ -72,6 +78,11 @@
         "name": "sections",
         "source": "tree",
         "transform": [{"type": "filter", "expr": "datum.depth === 1"}]
+    },
+    {
+  "name": "highlight",
+  "source": "leaves",
+  "transform": [{"type": "filter", "expr": "datum.id === 'sc-chat'"}]
     }
   ],
 
@@ -151,6 +162,61 @@
           "y": {"signal": "0.5 * (datum.y0 + datum.y1)"}
         }
       }
+    },
+    {
+  "type": "rect",
+  "from": {"data": "highlight"},
+  "interactive": false,
+  "encode": {
+    "enter": {
+      "fill": {"value": "transparent"},
+      "stroke": {"value": "#dc2626"},
+      "strokeWidth": {"value": 4}
+    },
+    "update": {
+      "x": {"field": "x0"}, "y": {"field": "y0"},
+      "x2": {"field": "x1"}, "y2": {"field": "y1"}
     }
+  }
+},
+{
+  "type": "text",
+  "from": {"data": "highlight"},
+  "interactive": false,
+  "encode": {
+    "enter": {
+      "align": {"value": "center"},
+      "baseline": {"value": "bottom"},
+      "fontSize": {"value": 12},
+      "fontStyle": {"value": "italic"},
+      "fill": {"value": "#dc2626"},
+      "text": {"value": [
+        "Snapchat is the most lopsided platform:",
+        "Chat (84%) sits 39 points above its",
+        "next-best feature (45%). No other platform",
+        "has a gap that large, so Snapchat's use",
+        "revolves around one feature."
+      ]}
+    },
+   "update": {
+      "x": {"signal": "0.5 * (datum.x0 + datum.x1) - 170"},
+      "y": {"signal": "datum.y0 - 60"}
+    }
+  }
+},
+{
+  "type": "rule",
+  "from": {"data": "highlight"},
+  "interactive": false,
+  "encode": {
+    "enter": {"stroke": {"value": "#dc2626"}, "strokeWidth": {"value": 2}},
+    "update": {
+     "x": {"signal": "0.5 * (datum.x0 + datum.x1) - 55"},
+      "y": {"signal": "datum.y0 - 49"},
+      "x2": {"signal": "0.5 * (datum.x0 + datum.x1)"},
+      "y2": {"signal": "datum.y0"}
+    }
+  }
+}
   ]
 }

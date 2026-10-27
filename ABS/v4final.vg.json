@@ -122,7 +122,9 @@
   {
     "fill": "color",
     "title": "Item type",
-    "orient": "right",
+    "orient": "none",
+     "legendX": 10,
+    "legendY": 10,
     "symbolType": "circle",
     "symbolSize": 150,
     "labelFontSize": 12,
