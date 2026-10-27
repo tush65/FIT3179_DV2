@@ -122,7 +122,7 @@
       "fontSize": {"value": 14},
       "align": {"value": "left"},
       "baseline": {"value": "top"},
-      "fill": {"signal": "datum.id === 'tt' ? '#ffffff' : '#000000'"},
+      "fill": {"signal": "(datum.id === 'tt' || datum.id === 'fb') ? '#ffffff' : '#000000'"},
       "text": {"field": "name"}
     },
     "update": {
@@ -142,7 +142,7 @@
           "font": {"value": "Helvetica Neue, Arial"},
           "align": {"value": "center"},
           "baseline": {"value": "middle"},
-          "fill": {"signal": "datum.parent === 'tt' ? '#ffffff' : '#000000'"},
+          "fill": {"signal": "(datum.parent === 'tt' || datum.parent === 'fb') ? '#ffffff' : '#000000'"},
           "fontSize": {"value": 12},
           "text": {"field": "name"}
         },

@@ -1,10 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "description": "A packed bubble chart.",
-  "usermeta": {
-    "author": "David Bacci",
-    "github": "https://github.com/PBI-David/Deneb-Showcase"
-  },
   "width": 760,
   "height": 500,
   "padding": {
@@ -42,52 +38,62 @@
         {
           "category": "Entertainment",
           "amount": 6013.1,
-          "pct": 49.9
+          "pct": 49.9,
+          "type" : "Non-Physical"
         },
         {
           "category": "Clothing",
           "amount": 5698.3,
-          "pct": 47.3
+          "pct": 47.3,
+          "type" : "Physical"
         },
         {
           "category": "Event Tickets",
           "amount": 5719.6,
-          "pct": 47.5
+          "pct": 47.5,
+          "type" : "Non-Physical"
         },
         {
           "category": "Travel",
           "amount": 6023.7,
-          "pct": 50
+          "pct": 50,
+          "type" : "Non-Physical"
         },
         {
           "category": "Toys",
           "amount": 3661.7,
-          "pct": 30.4
+          "pct": 30.4,
+          "type" : "Physical"
         },
         {
           "category": "Electronics",
           "amount": 3119.2,
-          "pct": 25.9
+          "pct": 25.9,
+          "type" : "Physical"
         },
         {
           "category": "Food",
           "amount": 2316,
-          "pct": 19.2
+          "pct": 19.2,
+          "type" : "Physical"
         },
         {
           "category": "Health",
           "amount": 1780.4,
-          "pct": 14.8
+          "pct": 14.8,
+          "type" : "Physical"
         },
         {
           "category": "Cars",
           "amount": 1342.6,
-          "pct": 11.2
+          "pct": 11.2,
+          "type" : "Physical"
         },
         {
           "category": "Gambling",
           "amount": 590.5,
-          "pct": 4.9
+          "pct": 4.9,
+          "type" : "Non-Physical"
         }
       ]
     }
@@ -106,19 +112,23 @@
       ]
     },
     {
-      "name": "color",
-      "type": "linear",
-      "domain": {
-        "data": "table",
-        "field": "pct"
-      },
-      "zero": true,
-      "range": [
-        "#c7e9c0",
-        "#00441b"
-      ]
-    }
+  "name": "color",
+  "type": "ordinal",
+  "domain": ["Physical", "Non-Physical"],
+  "range": ["#c0392b", "#2e7d32"]
+  }
   ],
+  "legends": [
+  {
+    "fill": "color",
+    "title": "Item type",
+    "orient": "right",
+    "symbolType": "circle",
+    "symbolSize": 150,
+    "labelFontSize": 12,
+    "titleFontSize": 12
+  }
+],
   "marks": [
     {
       "name": "nodes",
@@ -130,7 +140,7 @@
         "enter": {
           "fill": {
             "scale": "color",
-            "field": "pct"
+            "field": "type"
           },
           "xfocus": {
             "signal": "cx"
@@ -259,7 +269,7 @@
             "value": "bold"
           },
           "fill": {
-            "signal": "datum.datum.pct > 25 ? '#ffffff' : '#0b2e13'"
+             "value": "#ffffff"
           },
           "text": {
             "field": "datum.category"
@@ -295,7 +305,7 @@
             "value": "middle"
           },
           "fill": {
-            "signal": "datum.datum.pct > 25 ? '#ffffff' : '#0b2e13'"
+            "value": "#ffffff"
           },
           "text": {
             "signal": "datum.datum.pct + '%'"
